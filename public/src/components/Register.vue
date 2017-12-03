@@ -2,10 +2,13 @@
   <div>
     <h1>{{title}}</h1>
     
-    <input type="text" name="email" placeholder="Email" v-model="credential.email"  />
-    <input type="text" name="password" placeholder="Password" v-model="credential.pwd" />
+    <input type="text" name="email" placeholder="Email" v-model="credential.user"  /> <br>
+    <input type="text" name="password" placeholder="Password" v-model="credential.pwd" /><br>
     
-    <button v-on:click="adicionar">Adicionar</button>
+    <button v-on:click="adicionar">Adicionar</button> <br>
+    
+    <h2 v-if="msg != 'default' " class="msg" v-bind:class="{error : !msg, success : msg}">{{msg}}</h2>
+    
   </div>
 </template>
 
@@ -16,22 +19,25 @@ export default {
   data () {
     return {
       title: 'Register',
-      msg: 'Empty',
+      msg: 'default',
       credential:{
-        email:'',
+        user:'',
         pwd: ''
-      }
+      },
+      bgMessage: false
     }
   },
   methods:{
     async adicionar(){
       
       const response = await AuthenticationService.register({
-        email: this.credential.email,
+        user: this.credential.user,
         password: this.credential.pwd
       })
       
+      this.msg = response.data;
       console.log(response.data);
+      
     }
   },
   mounted () {
@@ -46,4 +52,19 @@ export default {
 input{
   margin-top:20px;
 }
+.msg{
+  color: #fff;
+  font-weight:bolder;
+  padding: 20px 40px;
+  width: 120px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+.success {
+  background: rgba(36, 149, 183,0.3);
+}
+.error{
+  background: rgba(198, 37, 37,0.3);
+}
 </style>
+
