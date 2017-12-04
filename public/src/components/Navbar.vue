@@ -3,6 +3,7 @@
     <ul>
         <li><a href="#/">home</a></li>
         <li><a href="#/register">Registrar</a></li>
+        <li><a href="#/grid">Grid</a></li>
     </ul>
   </div>
 </template>
