@@ -7,11 +7,11 @@
       <li v-else="$store.state.isUserLoggedIn" v-on:click="logout('statusChange')"><a href="#">Logout</a></li>
       <li><router-link to="Grid" v-on:click="navigateTo({name: 'grid'})">Grid</router-link></li>
     </ul>
-    <div v-if="logoutStatus" class="logout-modal" v-on:click="logout(false)">
-      <div class="logout-modal-content">
+    <div v-if="logoutStatus" class="modal" v-on:click="logout(false)">
+      <div class="modal-content">
         <h2>Deseja Deslogar?</h2>
-        <button v-on:click="logout(true)">Sim</button>
-        <button v-on:click="logout(false)">Não</button>
+        <button class="btn btn-success" v-on:click="logout(true)">Sim</button>
+        <button class="btn btn-warning" v-on:click="logout(false)">Não</button>
       </div>
     </div>
   </div>
@@ -35,7 +35,7 @@ export default {
         switch(arguments[0]){
           
         case 'statusChange':
-          this.logoutStatus = true
+          this.logoutStatus = !this.logoutStatus
           return
           
         case true:
@@ -81,24 +81,5 @@ ul{
         }
     }
 }
-.logout-modal{
-  width:100%;
-  height:100%;
-  position:absolute;
-  top:0;
-  left:0;
-  background: rgba(0,0,0,0.5);
-  z-index: 5;
-  
-  .logout-modal-content{
-    position:absolute;
-    left:50%;
-    top:50%;
-    background: #fff;
-    padding:25px;
-    text-align:center;
-    transform:translate(-50%,-50%);
-  }
-  
-}
+
 </style>
