@@ -1,7 +1,5 @@
 let _usuarios = [
-    { user: 'lucas', password: 'souto'},
-    { user: 'diego', password: 'silva'},
-    { user: 'alessandra', password: 'regina'}
+    { user: 'admin', password: 'admin'}
 ];
 
 module.exports = { usuarios : _usuarios};

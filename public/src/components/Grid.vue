@@ -7,21 +7,21 @@
                 <div class="col col-6">Aqui tem uma coluna de 6</div>
             </div>
             <div class="row">   
-                <div class="col col-3">Aqui tem uma coluna de 4</div>
-                <div class="col col-3">Aqui tem uma coluna de 4</div>
-                <div class="col col-3">Aqui tem uma coluna de 4</div>
-                <div class="col col-3">Aqui tem uma coluna de 4</div>
-                <div class="col col-3">Aqui tem uma coluna de 4</div>
-                <div class="col col-3">Aqui tem uma coluna de 4</div>
+                <div class="col col-4">Aqui tem uma coluna de 4</div>
+                <div class="col col-4">Aqui tem uma coluna de 4</div>
+                <div class="col col-4">Aqui tem uma coluna de 4</div>
+                <div class="col col-4">Aqui tem uma coluna de 4</div>
+                <div class="col col-4">Aqui tem uma coluna de 4</div>
+                <div class="col col-4">Aqui tem uma coluna de 4</div>
             </div>
             <div class="row">
                 <div class="col col-6">Aqui tem uma coluna de 6</div>
                 <div class="col col-6">Aqui tem uma coluna de 6</div>
             </div>
             <div class="row">   
-                <div class="col col-3">Aqui tem uma coluna de 4</div>
-                <div class="col col-3">Aqui tem uma coluna de 4</div>
-                <div class="col col-3">Aqui tem uma coluna de 4</div>
+                <div class="col col-4">Aqui tem uma coluna de 4</div>
+                <div class="col col-4">Aqui tem uma coluna de 4</div>
+                <div class="col col-4">Aqui tem uma coluna de 4</div>
                 
             </div>
         </div>
@@ -51,18 +51,17 @@ export default {
 .col{
     display:inline-block;
     margin-left: -4px;
+    margin-bottom:10px;
     box-sizing: border-box;
     border: 5px solid #245087;
     border-radius: 6px;
 }
-.row{
-    margin: 5px 0;
-}
+
 @media screen and (max-width: 767px){
     .col-6{
         width: 98%;
     }
-    .col-3{
+    .col-4{
         width: 98%;
     }    
 }
@@ -71,7 +70,7 @@ export default {
         width: 48%;
         
     }
-    .col-3{
+    .col-4{
         width: 48%;
         
     }    
@@ -80,21 +79,21 @@ export default {
     .col-6{
         width: 48.77777%;
     }
-    .col-3{
+    .col-4{
         width: 31%;
-        margin: 0 1.5%;
+        margin: 5px 1.5%;
     }   
     .row .col-6:first-child{
-        margin: 0 1% 0 0;
+        margin: 0 1% 10px 0;
     }
     .row .col-6:last-child{
-        margin: 0 0 0 1%;
+        margin: 0 0 10px 1%;
     }
-    .row .col-3:nth-child(3n){
-        margin: 0 0 0 1.5%;
+    .row .col-4:nth-child(3n){
+        margin: 0 0 10px 1.5%;
     }
-    .row .col-3:nth-child(3n+1){
-        margin: 0 1.5% 0 0 ;
+    .row .col-4:nth-child(3n+1){
+        margin: 0 1.5% 10px 0 ;
     }
     
 }

@@ -4,6 +4,10 @@ export default {
     register (credentials){
         console.log(Api())
         return Api().post('register',credentials)
+    },
+    login (credentials){
+        console.log(Api())
+        return Api().post('login',credentials)
     }
 }
 

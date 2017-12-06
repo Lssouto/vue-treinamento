@@ -1,4 +1,4 @@
-const loginCtrl = require('./controller/login')
+const AuthCtrl = require('./controller/Authentication')
 const config  = require('./config')
 
 const _all = (req, res, next) => {
@@ -15,6 +15,7 @@ const _all = (req, res, next) => {
 module.exports = (router)=>{
   
   router.all(config.data.api+'*', _all),
-  router.post(config.data.api+'/register', loginCtrl.register) 
+  router.post(config.data.api+'/register', AuthCtrl.register),
+  router.post(config.data.api+'/login', AuthCtrl.login) 
   
 };
