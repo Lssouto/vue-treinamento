@@ -6,6 +6,7 @@
       <li v-if="!$store.state.isUserLoggedIn"><router-link to="Login" v-on:click="navigateTo({name: 'login'})">Login</router-link></li>
       <li v-else="$store.state.isUserLoggedIn" v-on:click="logout('statusChange')"><a href="#">Logout</a></li>
       <li><router-link to="Grid" v-on:click="navigateTo({name: 'grid'})">Grid</router-link></li>
+      <li><router-link to="Games" v-on:click="navigateTo({name: 'games'})">Games</router-link></li>
     </ul>
     <div v-if="logoutStatus" class="modal" v-on:click="logout(false)">
       <div class="modal-content">
