@@ -1,4 +1,4 @@
-const login = require('../model/data')
+const data = require('../model/data')
 const jwt = require('jsonwebtoken')
 const config = require('../config')
 
@@ -11,7 +11,7 @@ function jwtSignUser (user){
 
 const _verify = (value)=>{
     
-    let user = (login.usuarios).find(function(pos){
+    let user = (data.usuarios).find(function(pos){
         return pos.user == value.user
     })
     if(user == undefined || user == null) 
@@ -25,40 +25,47 @@ const _verify = (value)=>{
 
 module.exports = { 
     register  : (req,res) => {
-        let verifyResult = _verify(req.body)
-        
-        if(verifyResult.status)
-           res.send({
-               status: "fail",
-               msg: "Usuário já Cadastrado",
-               user: verifyResult.user.user,
-           }) 
-           
-        else{
-            login.usuarios.push(req.body)
-            res.send({
-                status: "sucess",
-                msg: "Novo usuário Cadastrado",
-                user: verifyResult.user
-            })
+        try {
+            let verifyResult = _verify(req.body)
+            
+            if(verifyResult.status)
+               res.send({
+                   status: "fail",
+                   msg: "Usuário já Cadastrado",
+                   user: verifyResult.user.user,
+               }) 
+               
+            else{
+                data.usuarios.push(req.body)
+                res.send({
+                    status: "sucess",
+                    msg: "Novo usuário Cadastrado",
+                    user: verifyResult.user
+                })
+            }
+        } catch (e) {
+            res.status(500).send("Ocorreu um erro ao registrar: " + e)
         }
     },
     login : (req,res) => {
-        
-        let verifyResult = _verify(req.body)
-        
-        if(verifyResult.status)
-            res.send({
-                status: "sucess",
-                msg: "Login Realizado" ,  
-                user: verifyResult.user.user,
-                token: jwtSignUser(verifyResult.user)
-            })
-        else
-            res.send({
-                status: "fail",
-                msg: "Login Incorreto" ,  
-                user: req.body
-            })
+        try {
+            let verifyResult = _verify(req.body)
+                
+            if(verifyResult.status)
+                res.send({
+                    status: "sucess",
+                    msg: "Login Realizado" ,  
+                    user: verifyResult.user.user,
+                    token: jwtSignUser(verifyResult.user)
+                })
+            else
+                res.send({
+                    status: "fail",
+                    msg: "Login Incorreto" ,  
+                    user: req.body
+                })
+        } catch (e) {
+            res.status(500).send("Ocorreu um erro ao tentar logar: " + e)
+        }
     }
 }

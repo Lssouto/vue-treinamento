@@ -1,7 +1,7 @@
 <template>
   <div id="painel" >
     
-    <div class="col col-6">
+    <div>
         <h1>{{title}}</h1>
         <div class="form-container">
             <slot name="data">No Data found</slot>

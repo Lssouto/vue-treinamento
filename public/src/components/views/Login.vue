@@ -1,7 +1,7 @@
 <template>
   <div id="login">
     <div class="container">
-      <painel title="Login">
+      <painel title="Login" class="col col-6">
         <div slot="data">
           <form action="">
             <input type="text" name="email" placeholder="Email" v-model="credential.user" class="form-control"/> <br>

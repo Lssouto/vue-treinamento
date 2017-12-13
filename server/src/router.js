@@ -1,4 +1,5 @@
 const AuthCtrl = require('./controller/Authentication')
+const GamesCtrl = require('./controller/Games')
 const config  = require('./config')
 
 const _all = (req, res, next) => {
@@ -16,6 +17,8 @@ module.exports = (router)=>{
   
   router.all(config.data.api+'*', _all),
   router.post(config.data.api+'/register', AuthCtrl.register),
-  router.post(config.data.api+'/login', AuthCtrl.login) 
+  router.post(config.data.api+'/login', AuthCtrl.login),
+  router.get(config.data.api+'/games', GamesCtrl.getAll)
+  router.post(config.data.api+'/games', GamesCtrl.create)
   
 };
