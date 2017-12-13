@@ -36,5 +36,6 @@ export default new Router({
       name: 'Games',
       component: Games
     }
-  ]
+  ],
+  mode: 'history'
 })

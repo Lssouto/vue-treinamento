@@ -51,10 +51,7 @@ export default {
     },
     async mounted (){
         try {
-            let data = await GS.read()
-            this.games = data.data
-            
-            data = null
+            this.games = (await GS.read()).data
         } catch (e) {
             this.games = "Error"
             console.log(e);

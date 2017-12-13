@@ -15,3 +15,4 @@ require('./router')(app)
 app.use(express.static(path.join(__dirname, '../../public/dist' )));
 
 app.listen(process.env.PORT || config.data.port)
+console.log("\nServidor Rodando -> https://localhost:" + process.env.PORT + "\n")

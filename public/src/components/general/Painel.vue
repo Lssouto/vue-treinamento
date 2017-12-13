@@ -1,13 +1,9 @@
 <template>
   <div id="painel" >
-    
-    <div>
-        <h1>{{title}}</h1>
-        <div class="form-container">
-            <slot name="data">No Data found</slot>
-        </div>
+    <h1>{{title}}</h1>
+    <div class="form-container">
+        <slot name="data">No Data found</slot>
     </div>
-    
   </div>
 </template>
 
