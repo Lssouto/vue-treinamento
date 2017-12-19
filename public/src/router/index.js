@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Index from '@/components/views/Index'
 import Register from '@/components/views/Register'
 import Login from '@/components/views/Login'
-import Grid from  '@/components/views/Grid'
 import Games from  '@/components/views/Games'
 
 
@@ -20,11 +19,6 @@ export default new Router({
       path: '/register',
       name: 'Register',
       component: Register
-    },
-    {
-      path: '/grid',
-      name: 'Grid',
-      component: Grid
     },
     {
       path: '/login',

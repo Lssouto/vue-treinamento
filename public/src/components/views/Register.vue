@@ -46,6 +46,9 @@ export default {
       console.log(response.data);
       
       this.credential = {user: '', pwd: ''}
+      this.$router.push({
+        name: 'login'
+      })
     }
   },
   mounted () {

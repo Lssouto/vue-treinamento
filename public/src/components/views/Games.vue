@@ -1,7 +1,7 @@
 <template>
    <div id="games">
        <div class="container">
-           <painel title="Game List" class="col col-6">
+           <painel title="Game List" class="col-md-6">
                <div slot="data">
                    <ul v-if="!(games === 'Error')">
                        <li v-for="game in games">
@@ -14,7 +14,7 @@
                </div>
            </painel>
            
-           <painel title="Game add" class="col col-6">
+           <painel title="Game add" class="col-md-6">
                 <div slot="data">
                     <form action="" autocomplete="off">
                         <input type="text" name="email" placeholder="Email" v-model="game.title" class="form-control"/> <br>
