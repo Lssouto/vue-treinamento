@@ -1,5 +1,5 @@
 <template>
-  <div id="logout" v-on:click="logout(false)"> 
+  <div id="logout"> 
     <modal>
       <div slot="data">
         <h2>Deseja Deslogar?</h2>

@@ -3,19 +3,22 @@ $white : #fff;
 $main : #1b84aa;
 $main-alt : #a35e10;
 
+@import "reset";
+
 body{
     font-family: Calibri;
 }
 .p-0{
     padding: 0 !important;
 }
-h1{
-    color: #cecece;
-    background: #fff;
-    padding: 25px;
-    margin: 15px 0 0 0 ;
-    
+.flex-wrap {
+    display: flex;
+
+    & > div {
+        flex: 1 1 auto;
+    }
 }
+
 .modal{
     display: block !important;
     position: absolute;
@@ -96,62 +99,7 @@ input{
   border: 1px solid #123123;
 }
 
-// Grid
-.col{
-    display: inline-block;
-    margin-left: -4px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    vertical-align: top;
-}
-
-@media screen and (max-width: 767px){
-    .col-8{
-        width: 98%;
-    }
-    .col-6{
-        width: 98%;
-    }
-    .col-4{
-        width: 98%;
-    }    
-}
-@media screen and (min-width: 768px){
-    .col-8{
-        width: 48%;
-    }
-    .col-6{
-        width: 48%;
-    }
-    .col-4{
-        width: 48%;
-    }    
-}
-@media screen and (min-width: 992px){
-    .col-8{
-        width: 62%;
-    }
-    .col-6{
-        width: 47.77777%;
-    }
-    .col-4{
-        width: 30%;
-        margin: 5px 1.5%;
-    }   
-    .row .col-6:first-child{
-        margin: 0 1% 10px 0;
-    }
-    .row .col-6:last-child{
-        margin: 0 0 10px 1%;
-    }
-    .row .col-4:nth-child(3n){
-        margin: 0 0 10px 1.5%;
-    }
-    .row .col-4:nth-child(3n+1){
-        margin: 0 1.5% 10px 0 ;
-    }
-    
-}
+//Reset
 ul{
     margin:0;
     padding:0;
@@ -160,14 +108,15 @@ li{
     list-style:none;
     margin: 5px 0;
 }
-//
 
 
-header{
-    position: initial !important;
+
+#app header{
+	position: initial ;
 	background: $black;
   	padding: 20px 15px;
 	color: $white;
+	float: none;
 	a:link,a:visited{
 		color: $white;
 		font-size: 20px;
@@ -181,12 +130,13 @@ header{
 #navbar{
     
 	@media screen and (min-width: 992px) {
-		min-height: 580px;
+		min-height: 100%;
 	}
 	background: $black;
 	input[type="checkbox"]{
 		display: none;
 	}
+	
 	li{
 
 		background: $main;
@@ -250,6 +200,7 @@ header{
 	}	
 }
 footer#rodape{
+	
 	background: $main-alt;
 	color: $white;
 	padding: 10px;
@@ -264,44 +215,5 @@ footer#rodape{
 	}
 	p{
 		margin-top: 20px;
-	}
-}
-#content{
-	padding: 25px;
-	h2{
-		margin-top: 25px;
-		margin-bottom: 45px;
-	}
-	table{
-		width: 100%;
-		tr{
-			border: 10px solid $white;
-		}
-		td{
-			&:nth-child(2){
-				padding: 15px 15px 15px 45px;
-				background: darken($black,25%);
-			}
-			&:nth-child(1),&:nth-child(3){
-				padding: 15px 15px 15px 45px;
-				background: lighten($black,15%);
-			}
-			span.fa{
-				display: inline-block;
-				margin-left: -4px;
-			}
-			span.fa-search{
-				background-color: lighten($black,25%);
-				color: $black;
-				padding: 17px;
-				font-size: 20px;
-			}
-			span.fa-close{
-				background-color: $main;
-				color: $white;
-				padding: 17px;
-				font-size: 20px;
-			}
-		}
 	}
 }

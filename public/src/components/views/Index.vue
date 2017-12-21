@@ -1,6 +1,6 @@
 <template>
     <div class="index">
-        <div class="container">
+        <div class="container-fluid">
             <h1>Bem vindo à {{title}}</h1>
         </div>
     </div>

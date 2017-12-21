@@ -1,7 +1,7 @@
 <template>
     <div id="modal" class="modal" >
-        <div class="mask" v-on:click="close(true)"></div>
-        <div class="modal-content" v-on:click="close(false)">
+        <div class="mask" v-on:click="close()"></div>
+        <div class="modal-content">
             <slot name="data">No Data Found</slot>
         </div>
     </div>
@@ -11,9 +11,8 @@
 export default {
     name : 'Modal',
     methods : {
-        close(state){
-            if(state)
-                this.$router.go(-1)
+        close(){
+            this.$router.go(-1)
         }
     }
 }

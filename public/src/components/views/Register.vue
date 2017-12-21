@@ -1,6 +1,6 @@
 <template>
   <div id="register" >
-    <div class="container">
+    <div class="container-fluid">
       <painel title="Register" class="col col-6">
         <div slot="data">
           <form action="" autocomplete="off">

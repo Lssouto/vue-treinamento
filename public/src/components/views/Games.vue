@@ -1,6 +1,6 @@
 <template>
    <div id="games">
-       <div class="container">
+       <div class="container-fluid">
            <painel title="Game List" class="col-md-6">
                <div slot="data">
                    <ul v-if="!(games === 'Error')">
@@ -26,6 +26,7 @@
                 </div>
            </painel>
        </div>
+       
    </div>
 </template>
 
