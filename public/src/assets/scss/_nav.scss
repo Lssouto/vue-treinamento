@@ -1,0 +1,72 @@
+#navbar{
+    
+	@media screen and (min-width: 992px) {
+		min-height: 100%;
+	}
+	background: $black;
+	input[type="checkbox"]{
+		display: none;
+	}
+	
+	li{
+
+		background: $main;
+		color: $white;
+	    margin: 0px;
+	    
+		label{
+			width: 100%;
+			padding-left: 45px;
+			height: 55px;
+			line-height: 53px;
+			font-weight: bolder;
+			position: relative;
+		}
+        
+		a:link,a:visited{
+			height: 55px;
+			line-height: 53px;
+			color: $white;
+			font-weight: bolder;
+			padding-left: 45px;
+			padding-right: 100px;
+			width: 100%;
+			cursor: pointer;
+			position: relative;
+		}
+
+		input[type="checkbox"] + label + ul{
+			display: none;
+		}
+		input[type="checkbox"]:checked + label + ul{
+			display: block;
+		}
+				ul{
+			padding-top:20px;
+			padding-bottom: 20px;
+			padding-left: 25px;	
+			background-color: darken($main,10%);
+			li{
+				background-color: darken($main,10%);
+			}
+			label{
+				width: 100%;
+				padding-left: 45px;
+				height: 25px;
+				line-height: 53px;
+				font-weight: bolder;
+			}
+
+			a,a:link,a:visited{
+				height: 25px;
+				line-height: 25px;
+				color: $white;
+				font-weight: bolder;
+				padding-left: 45px;
+				width: 100%;
+				cursor: pointer;
+			}
+			
+		}
+	}	
+}
