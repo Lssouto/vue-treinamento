@@ -1,9 +1,9 @@
 <template>
   <div id="navbar">
     <ul>
-      <li><router-link to="/" v-on:click="navigateTo({name: 'index'})">Home</router-link></li>
-      <li><router-link to="Register" v-on:click="navigateTo({name: 'register'})">Register</router-link></li>
-      <li><router-link to="Games" v-on:click="navigateTo({name: 'games'})">Games</router-link></li>
+      <li><router-link to="/" >Home</router-link></li>
+      <li><router-link to="Register" >Register</router-link></li>
+      <li><router-link to="games">Games</router-link></li>
     </ul>
     
   </div>

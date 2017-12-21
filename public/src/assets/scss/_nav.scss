@@ -1,7 +1,10 @@
 #navbar{
     
 	@media screen and (min-width: 992px) {
-		min-height: 100%;
+		min-height: 600px;
+		position: fixed;
+		top: 99px;
+		left: 0;
 	}
 	background: $black;
 	input[type="checkbox"]{

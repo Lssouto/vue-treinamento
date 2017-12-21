@@ -1,6 +1,10 @@
 @import "reset";
-@import "color";
-@import "global";
-@import "nav";
-@import "header";
-@import "generalComponents";
+@import "vars";
+    
+#app{
+    @import "header";
+    @import "nav";
+    @import "generalComponents";
+    @import "global";
+    @import "medias";
+}

@@ -30,7 +30,7 @@ module.exports = {
             
             if(verifyResult.status)
                res.send({
-                   status: "fail",
+                   status: false,
                    msg: "Usuário já Cadastrado",
                    user: verifyResult.user.user,
                }) 
@@ -38,7 +38,7 @@ module.exports = {
             else{
                 data.usuarios.push(req.body)
                 res.send({
-                    status: "sucess",
+                    status: true,
                     msg: "Novo usuário Cadastrado",
                     user: verifyResult.user
                 })
@@ -53,14 +53,14 @@ module.exports = {
                 
             if(verifyResult.status)
                 res.send({
-                    status: "sucess",
+                    status: true,
                     msg: "Login Realizado" ,  
                     user: verifyResult.user.user,
                     token: jwtSignUser(verifyResult.user)
                 })
             else
                 res.send({
-                    status: "fail",
+                    status: false,
                     msg: "Login Incorreto" ,  
                     user: req.body
                 })

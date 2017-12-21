@@ -1,18 +1,16 @@
 <template>
-  <div id="register" >
-    <div class="container-fluid">
-      <painel title="Register" class="col col-6">
-        <div slot="data">
-          <form action="" autocomplete="off">
-            <input type="text" name="email" placeholder="Email" v-model="credential.user" class="form-control"/> <br>
-            <input type="password" name="password" placeholder="Password" v-model="credential.pwd" class="form-control" /><br>
-            
-            <button type="button" v-on:click="adicionar" class="btn btn-success">Adicionar</button> <br>
-          </form>
-          <h2 v-if="msg != 'default' " class="msg" v-bind:class="{error : !msg, success : msg}">{{msg}}</h2>
-        </div>
-      </painel>
-    </div>
+  <div id="register" class="container-fluid" >
+    <painel v-bind:title="title">
+      <div slot="data">
+        <form action="" autocomplete="off">
+          <input type="text" name="email" placeholder="Email" v-model="credential.user" class="form-control"/> <br>
+          <input type="password" name="password" placeholder="Password" v-model="credential.pwd" class="form-control" /><br>
+          
+          <button type="button" v-on:click="adicionar" class="btn btn-success">Adicionar</button> <br>
+        </form>
+        <h2 v-if="responseData.msg != 'default' " class="msg" v-bind:class="{error : !responseData.status, success : responseData.status}">{{responseData.msg}}</h2>
+      </div>
+    </painel>
   </div>
 </template>
 
@@ -26,12 +24,15 @@ export default {
   data () {
     return {
       title: 'Register',
-      msg: 'default',
+      responseData: {
+        msg:'default',
+        status : false
+      },
+      msgStatus: false,
       credential:{
         user:'',
         pwd: ''
-      },
-      bgMessage: false
+      }
     }
   },
   methods:{
@@ -42,13 +43,12 @@ export default {
         password: this.credential.pwd
       })
       
-      // this.msg = response.data;
+      this.responseData = response.data;
+      
       console.log(response.data);
       
       this.credential = {user: '', pwd: ''}
-      this.$router.push({
-        name: 'login'
-      })
+      
     }
   },
   mounted () {

@@ -24,8 +24,9 @@ body{
     color: #fff;
     font-weight: bolder;
     padding: 20px 40px;
-    margin: 0 auto;
+    margin: 25px auto;
     text-transform: uppercase;
+    display: inline-block;
     
     &.success {
         background: rgba(36, 149, 183,0.3);
@@ -39,7 +40,7 @@ body{
     height: 35px;
     border: rgba(0,0,0,0.4) 1px solid;
     border-radius: 3px;
-    width: 200px;
+    
     padding: 2px 2px 2px 25px;
     &:hover,&:active,&:focus{
         box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);

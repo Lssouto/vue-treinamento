@@ -1,7 +1,7 @@
 <template>
   <div id="painel" >
-    <h1>{{title}}</h1>
     <div class="form-container">
+    <h1>{{title}}</h1>
         <slot name="data">No Data found</slot>
     </div>
   </div>
@@ -18,8 +18,6 @@ export default {
 </script>
 
 <style scoped>
-.col-6{
-    margin: 0 auto;
-}
+
 </style>
 
