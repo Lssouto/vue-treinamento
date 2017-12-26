@@ -17,13 +17,11 @@ export default {
     return {
       title: 'Navbar'
     }
-  },
-  methods: {
-    navigateTo (router){
-      this.$router.push(router)
-    }
   }
+  
 }
+
+
 </script>
 
 

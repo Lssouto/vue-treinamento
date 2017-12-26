@@ -14,33 +14,35 @@ export default new Router({
     {
       path: '/',
       name: 'Index',
-      component: Index
+      component: Index,
+      meta: {title: 'Home'}
     },
     {
       path: '/register',
       name: 'Register',
-      component: Register
+      component: Register,
+      meta: {title: 'Register'}
     },
     {
       path: '/login',
       name: 'Login',
-      component: Login
+      component: Login,
+      meta: {title: 'Login'}
+      
     },
     {
       path: '/logout',
       name: 'Logout',
-      component: Logout
+      component: Logout,
+      meta: {title: 'Logout'}
     },
     {
       path: '/games',
       name: 'Games',
-      component: Games
-    },
-    {
-      path: '/modal',
-      name: 'Modal',
-      component: Modal
+      component: Games,
+      meta: {title: 'Games'}
     }
   ],
   mode: 'history'
 })
+

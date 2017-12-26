@@ -13,6 +13,9 @@ export default {
     return {
       title: 'index'
     }
+  },
+  mounted (){
+  
   }
 }
 </script>

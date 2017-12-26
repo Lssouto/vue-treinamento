@@ -14,11 +14,15 @@ require('../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss')
 
 sync( store, router )
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
   template: '<App/>',
   components: { App }
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title
+  next()
 })

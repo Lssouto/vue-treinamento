@@ -19,6 +19,14 @@ export default {
   components:{
     navbar: Navbar,
     cHeader
+  },
+  data(){
+    return{
+      title: "hue"
+    }
+  },
+  methods:{ 
+    
   }
 }
 
