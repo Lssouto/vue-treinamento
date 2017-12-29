@@ -6,7 +6,7 @@ import Login from '@/components/global/Login'
 import Logout from '@/components/global/Logout'
 import Games from  '@/components/views/Games'
 import Modal from '@/components/general/Modal'
-
+import c404 from '@/components/error/404'
 Vue.use(Router)
 
 export default new Router({
@@ -41,6 +41,12 @@ export default new Router({
       name: 'Games',
       component: Games,
       meta: {title: 'Games'}
+    },
+    {
+      path: "*",
+      name: '404',
+      component: c404,
+      meta: {title : 'erro 404'}
     }
   ],
   mode: 'history'

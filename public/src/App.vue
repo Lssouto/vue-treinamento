@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <c-header class="col-md-12"></c-header>
+    <c-header class="col-md-12 m-0"></c-header>
     <div class="flex-wrap">
       <navbar class="col-md-2 p-0" style="position:initial"></navbar>
       <router-view class="col-md-10 p-0"></router-view>
