@@ -17,26 +17,24 @@
            <painel title="Game add" class="col-md-6">
                 <div slot="data">
                     <form action="" autocomplete="off" v-on:submit.prevent="adicionar">
-                        <input 
-                            type="text" 
+                        <v-text-field 
                             name="titulo"
-                            placeholder="Título" 
+                            label="Título"
                             v-model="game.title" 
-                            class="form-control" 
                             required 
                             :rules="[required]" 
-                        /> <br>
-                        <input 
+                        ></v-text-field>
+                        <v-text-field 
                             type="text"
-                            name="ano" 
-                            placeholder="Ano"
+                            label="Ano"
                             v-model="game.ano" 
-                            class="form-control" 
                             required 
                             :rules="[required]"
-                        /><br>
+                        ></v-text-field>
                         
-                        <button type="submit" class="btn btn-success">Adicionar</button> <br>
+                        <div class="input-group-form">
+                            <button type="submit" class="btn btn-success">Adicionar</button>
+                        </div>
                     </form>
                     <h2 v-if="msg != 'default' " class="msg" v-bind:class="{error : !msg, success : msg}">{{msg}}</h2>
                 </div>
@@ -108,4 +106,5 @@ export default {
 
 
 <style lang="scss" scoped>
+
 </style>
