@@ -38,12 +38,15 @@ body{
 .form-control{
 	margin-top: 20px;
     height: 35px;
-    border: rgba(0,0,0,0.4) 1px solid;
-    border-radius: 3px;
-    
+    border: 0px;
+    border-bottom: rgba(0,0,0,0.4) 1px solid;
+    border-radius: 0px;
+    box-shadow: none;
     padding: 2px 2px 2px 25px;
+    
     &:hover,&:active,&:focus{
-        box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+        box-shadow: 0 4px 10px 0 rgba($main,0.4);
+        border-bottom: $main 1px solid;
     }
 }
 .form-container{

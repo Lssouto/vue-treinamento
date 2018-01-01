@@ -16,11 +16,27 @@
            
            <painel title="Game add" class="col-md-6">
                 <div slot="data">
-                    <form action="" autocomplete="off">
-                        <input type="text" name="email" placeholder="Email" v-model="game.title" class="form-control"/> <br>
-                        <input type="text" name="password" placeholder="Password" v-model="game.ano" class="form-control" /><br>
+                    <form action="" autocomplete="off" v-on:submit.prevent="adicionar">
+                        <input 
+                            type="text" 
+                            name="titulo"
+                            placeholder="Título" 
+                            v-model="game.title" 
+                            class="form-control" 
+                            required 
+                            :rules="[required]" 
+                        /> <br>
+                        <input 
+                            type="text"
+                            name="ano" 
+                            placeholder="Ano"
+                            v-model="game.ano" 
+                            class="form-control" 
+                            required 
+                            :rules="[required]"
+                        /><br>
                         
-                        <button type="button" v-on:click="adicionar" class="btn btn-success">Adicionar</button> <br>
+                        <button type="submit" class="btn btn-success">Adicionar</button> <br>
                     </form>
                     <h2 v-if="msg != 'default' " class="msg" v-bind:class="{error : !msg, success : msg}">{{msg}}</h2>
                 </div>
@@ -44,7 +60,8 @@ export default {
                 title: '',
                 ano: ''
             },
-            msg: 'default'
+            msg: 'default',
+            required : (value) => !!value || 'Required.'
         }
     },
     components : {
@@ -59,7 +76,12 @@ export default {
         }
     },
     methods: {
-        async adicionar(){
+        async adicionar(e){
+            e.preventDefault
+            const isFormOk = Object.keys(this.games).every(key => !!this.games[key])
+            if(!isFormOk){
+                return 
+            }
             try {
                 let data = await GS.create(this.game)
                 console.log(data.data)
