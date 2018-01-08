@@ -73,4 +73,50 @@ body{
     padding: 25px 50px;
 }
 
-
+.list-img-desc{
+    
+    @extend .flex-wrap;
+    
+    padding: 35px;
+    position: relative;
+    
+    .list-img{
+        img{
+            width: 100%;
+        }
+    }
+    .list-desc{
+        .title{
+            font-weight: bolder;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+    }
+    
+    &:after{
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 1px;
+        left: 5%;
+        bottom: 0px;
+        background: $black;
+    }
+    
+    &:hover{
+        box-shadow: 0 0 10px 0 rgba($black,0.8);
+        &:after{
+            height: 0px;
+        }
+    }
+}
+.adicionar-item{
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    border-radius: 50%;
+    background-color: $main;
+    color: $white;
+    font-size: 35px;
+    padding: 0 16px;
+}

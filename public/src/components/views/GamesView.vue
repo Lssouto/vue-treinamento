@@ -15,16 +15,9 @@
                    </div>
                </li>
            </ul>
-          
            <div v-else class="msg error" >
                Ocorreu um error ao Renderizar os Dados!!
            </div>
-           
-           <router-link to="games/adicionar" >
-               <div class="adicionar-item">
-                   +
-               </div>
-           </router-link>
        </div>
     </div>
 </template>
@@ -59,7 +52,5 @@ export default {
 
 
 <style lang="scss" scoped>
-#games > .container-fluid{
-    position: relative;
-}
+
 </style>

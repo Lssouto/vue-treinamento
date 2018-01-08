@@ -5,6 +5,8 @@ import Register from '@/components/views/Register'
 import Login from '@/components/global/Login'
 import Logout from '@/components/global/Logout'
 import Games from  '@/components/views/Games'
+import GamesAdd from  '@/components/views/GamesAdd'
+import GamesView from  '@/components/views/GamesView'
 import Modal from '@/components/general/Modal'
 import c404 from '@/components/error/404'
 Vue.use(Router)
@@ -40,6 +42,18 @@ export default new Router({
       path: '/games',
       name: 'Games',
       component: Games,
+      meta: {title: 'Games'}
+    },
+    {
+      path: '/games/Adicionar',
+      name: 'GamesAdd',
+      component: GamesAdd,
+      meta: {title: 'Adicionar Games'}
+    },
+    {
+      path: '/games/:gameId',
+      name: 'GamesView',
+      component: GamesView,
       meta: {title: 'Games'}
     },
     {
