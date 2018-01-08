@@ -45,14 +45,14 @@ export default new Router({
       meta: {title: 'Games'}
     },
     {
-      path: '/games/Adicionar',
+      path: '/games/adicionar',
       name: 'GamesAdd',
       component: GamesAdd,
       meta: {title: 'Adicionar Games'}
     },
     {
       path: '/games/:gameId',
-      name: 'GamesView',
+      name: 'Game',
       component: GamesView,
       meta: {title: 'Games'}
     },

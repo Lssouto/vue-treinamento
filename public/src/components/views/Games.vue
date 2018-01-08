@@ -11,7 +11,7 @@
                        <div class="desc">
                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quos incidunt dicta. Cum dicta, veniam voluptatibus reiciendis deserunt ipsam rem harum magnam voluptatum numquam perferendis, tempora non doloribus repudiandae sunt!
                        </div>
-                       <button type="button" class="btn btn-success" v-on:click="navigateTo({name: 'games', params: {gameId: games.id }})">Ver mais</button>
+                       <button type="button" class="btn btn-success" v-on:click="navigateTo({name: 'Game', params: {gameId: game.id }})">Ver mais</button>
                    </div>
                </li>
            </ul>

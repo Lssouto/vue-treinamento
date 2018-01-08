@@ -6,6 +6,9 @@ export default {
     },
     create (game){
         return Api().post('games',game)
+    },
+    show (id){
+        return Api().get('games/'+id)
     }
 
 }

@@ -20,5 +20,6 @@ module.exports = (router)=>{
   router.post(config.data.api+'/login', AuthCtrl.login),
   router.get(config.data.api+'/games', GamesCtrl.getAll)
   router.post(config.data.api+'/games', GamesCtrl.create)
+  router.get(config.data.api+'/games/:id', GamesCtrl.show)
   
 };

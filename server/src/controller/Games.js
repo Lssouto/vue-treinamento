@@ -17,5 +17,14 @@ module.exports = {
         } catch (e) {
             res.status(500).send("Ocorreu um erro ao adicionar o jogo :" + e)
         }
+    },
+    show : (req,res)=>{
+        try {
+            res.send((data.games).find((game)=>{
+                return game.id == req.params.id
+            }))
+        } catch (e) {
+            res.status(500).send("Ocorreu um erro ao adicionar o jogo :" + e)
+        }
     }
 }
