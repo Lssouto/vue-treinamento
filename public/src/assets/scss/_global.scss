@@ -92,15 +92,17 @@ body{
             margin-bottom: 15px;
         }
     }
-    
-    &:after{
-        content: "";
-        position: absolute;
-        width: 90%;
-        height: 1px;
-        left: 5%;
-        bottom: 0px;
-        background: $black;
+    &:not(:last-child){
+        
+        &:after{
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 1px;
+            left: 5%;
+            bottom: 0px;
+            background: $black;
+        }
     }
     
     &:hover{

@@ -49,7 +49,8 @@ export default {
             title: "Add Games",
             game:{
                 title: '',
-                ano: ''
+                ano: '',
+                imgUrl: ''
             },
             msg: 'default',
             required : (value) => !!value || 'Required.'
@@ -61,7 +62,8 @@ export default {
         methods: {
         async adicionar(e){
             e.preventDefault
-            const isFormOk = Object.keys(this.games).every(key => !!this.games[key])
+        
+            const isFormOk = Object.keys(this.game).every(key => !!this.game[key])
             if(!isFormOk){
                 return 
             }
@@ -69,7 +71,7 @@ export default {
                 let data = await GS.create(this.game)
                 console.log(data.data)
                 data = null
-                this.reloadGames()
+                this.$router.push({name : 'Games'})
             } catch (e) {
                 console.log(e);
             }
