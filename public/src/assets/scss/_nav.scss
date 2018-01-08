@@ -6,69 +6,62 @@
 		left: 0;
 	}
 	background: $black;
+	
 	input[type="checkbox"]{
 		display: none;
 	}
 	
 	li{
-
-		background: $main;
-		color: $white;
-	    margin: 0px;
-	    
-		label{
-			width: 100%;
-			padding-left: 45px;
-			height: 55px;
-			line-height: 53px;
-			font-weight: bolder;
-			position: relative;
-		}
-        
-		a:link,a:visited{
-			height: 55px;
+		position: relative;
+		overflow: hidden;
+		a,label{	
+			@extend .fast-e;
+			background-color: $main;
+			color: $white;
+		    margin: 0px;
+			display: block;
+			padding-left: 15px;
 			line-height: 53px;
 			color: $white;
 			font-weight: bolder;
-			padding-left: 45px;
-			padding-right: 100px;
-			width: 100%;
 			cursor: pointer;
-			position: relative;
+			
+			&:hover,&:active,&:focus{
+				text-decoration: none;
+				background-color: darken($main,15%);
+			}
 		}
 
 		input[type="checkbox"] + label + ul{
-			display: none;
+			@extend .fast-e;
+			position: absolute;
+			margin-left: -100%;
 		}
 		input[type="checkbox"]:checked + label + ul{
-			display: block;
+			position: initial;
+			margin-left: 0;
+			
 		}
-				ul{
-			padding-top:20px;
-			padding-bottom: 20px;
-			padding-left: 25px;	
-			background-color: darken($main,10%);
-			li{
-				background-color: darken($main,10%);
-			}
-			label{
+			ul{
+				background-color: $main;
 				width: 100%;
-				padding-left: 45px;
-				height: 25px;
-				line-height: 53px;
-				font-weight: bolder;
+			li{
+				a,label{
+					line-height: 25px;
+					color: $white;
+					font-weight: bolder;
+					padding-left: 45px;
+					width: 100%;
+					cursor: pointer;
+					background-color: $main-alt;
+					
+					&:hover,&:active,&:focus{
+						text-decoration: none;
+						background-color: darken($main-alt,15%);
+					}
+				}
 			}
 
-			a,a:link,a:visited{
-				height: 25px;
-				line-height: 25px;
-				color: $white;
-				font-weight: bolder;
-				padding-left: 45px;
-				width: 100%;
-				cursor: pointer;
-			}
-			
 		}
 	}	
 }
