@@ -4,7 +4,9 @@
 #app{
     @import "header";
     @import "nav";
-    @import "generalComponents";
     @import "global";
     @import "medias";
+    
+    @import "components/spin-btn";
+    @import "components/modal";
 }

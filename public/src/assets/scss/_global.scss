@@ -105,6 +105,11 @@ body{
             margin-bottom: 15px;
         }
     }
+    .btn-more{
+        position: absolute;
+        bottom: 10px;
+        right: 40px;
+    }
     &:not(:last-child){
         
         &:after{
@@ -128,12 +133,7 @@ body{
 .adicionar-item{
     position: absolute;
     top: -5px;
-    right: 5px;
-    border-radius: 50%;
-    background-color: $main;
-    color: $white;
-    font-size: 35px;
-    padding: 0 16px;
+    right: 200px;
 }
 .container-fluid{
     margin: 10px 5px;

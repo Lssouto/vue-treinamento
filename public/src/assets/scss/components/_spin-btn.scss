@@ -1,0 +1,83 @@
+.spin-btn{
+    
+    .content-container{
+        @extend .fast-e;
+        
+        position: relative;
+        height: 60px;
+        width: 60px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    
+    .main{
+        color: $white;
+        font-size: 35px;
+        position: absolute;
+        top: 50%;
+        left: 50% ;
+        transform: translate(-50%,-50%);
+        background-color: $main;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding-top: 5px;
+        text-align: center;
+    }
+    
+    .text-container{
+        
+        font-size: 35px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 60px;
+        width: 260px;
+        
+        
+        .text{
+            color: $white;
+            display: inline-block;
+            background-color: $main;
+            font-size: 20px;
+            
+            vertical-align: baseline;
+        }
+    }
+    
+    &:hover{
+        .content-container{
+            margin-top: -100px;
+            margin-right: -100px;
+            width: 260px;
+            height: 260px;
+            border-radius: 0px;
+        }
+        .deg-90,.deg-180,.deg-270,.deg-360,.deg90,.deg180,.deg270,.deg360{
+            transform: translate(-50%,-50%) rotate(0);
+        }
+    }
+    
+    //Onde vai parar o texto
+    .left-side{
+        text-align: left;
+        .text{
+            padding: 4px 22px 4px 7px;
+        }
+    }
+    .right-side{
+        text-align: right;
+        .text{
+            padding: 4px 7px 4px 22px;
+        }
+    }
+    
+    //De qual angulo ele vem
+    @for $angle from -4 through 4 {
+      .deg#{$angle*90}{
+        transform: translate(-50%,-50%) rotate(#{$angle*90}deg);  
+      }
+    }
+
+    
+}

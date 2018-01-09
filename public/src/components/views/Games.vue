@@ -11,7 +11,7 @@
                        <div class="desc">
                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quos incidunt dicta. Cum dicta, veniam voluptatibus reiciendis deserunt ipsam rem harum magnam voluptatum numquam perferendis, tempora non doloribus repudiandae sunt!
                        </div>
-                       <button type="button" class="btn btn-success" v-on:click="navigateTo({name: 'Game', params: {gameId: game.id }})">Ver mais</button>
+                       <button type="button" class="btn btn-success btn-more" v-on:click="navigateTo({name: 'Game', params: {gameId: game.id }})">Ver mais</button>
                    </div>
                </li>
            </ul>
@@ -20,17 +20,19 @@
                Ocorreu um error ao Renderizar os Dados!!
            </div>
            
-           <router-link to="games/adicionar" >
-               <div class="adicionar-item">
-                   +
-               </div>
-           </router-link>
-       </div>
+            <div class="adicionar-item">
+                <spin-btn link="games/adicionar" start="deg-90" end="right" speed="fast">
+                    <div slot="text">Adicionar</div>
+                    <div slot="symbol">+</div>
+                </spin-btn>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 import GS from "@/services/GamesService"
+import SpinBtn from "@/components/general/SpinBtn"
 
 export default {
     name: 'Game',
@@ -53,6 +55,9 @@ export default {
         navigateTo : function(router){
             this.$router.push(router);
         }
+    },
+    components : {
+        SpinBtn
     }
 }
 </script>
@@ -62,4 +67,5 @@ export default {
 #games > .container-fluid{
     position: relative;
 }
+
 </style>
