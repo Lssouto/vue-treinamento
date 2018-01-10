@@ -7,7 +7,8 @@
                 <button class="btn btn-effect _pulse" :style="colorsObject"> Pulse</button>
                 <h2>Hover effect</h2>
                 <button class="btn btn-effect _stop-inside _right" :style="colorsObject">Stop inside</button>
-                <h1>teste</h1>
+                <h2>Alterar cor</h2>
+                <button class="btn" @click="changeColor()" :style="colorsObject">Alterar</button>
           </div>
           <div class="col-md-6">
                 <div class="photoshop-container">
@@ -18,7 +19,6 @@
                     <h3>Text</h3>
                     <photoshop-picker v-model="textColors"> </photoshop-picker>
                 </div>
-                <button class="btn" @click="changeColor()" :style="colorsObject">Alterar</button>
           </div>
       </div>
   </div>
@@ -54,7 +54,14 @@ export default {
 <style lang="scss" scoped>
 .photoshop-container{
     display: block;
-    
+    position: relative;
+    margin-bottom: 15px;
+    h3{
+        position:absolute;
+        left: 10px;
+        top: -20px;
+        
+    }
 }
 
 </style>
