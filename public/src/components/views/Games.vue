@@ -21,7 +21,7 @@
            </div>
            
             <div class="adicionar-item">
-                <spin-btn link="games/adicionar" start="deg-90" end="right" speed="fast">
+                <spin-btn link="games/adicionar" start="deg-90" end="left" speed="fast">
                     <div slot="text">Adicionar</div>
                     <div slot="symbol">+</div>
                 </spin-btn>
