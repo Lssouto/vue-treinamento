@@ -13,14 +13,15 @@
             
             <div class="row">   
                 <div class="col-md-12">
-                    Opniões
+                    Comentários
                     <ul class="row">
                         <li class="list-simple">
-                            <div class="col-md-2">
+                            <div class="col-md-1">
                                 
                             </div>
-                            <div class="col-md-10">
-                                user : 123
+                            <div class="col-md-11">
+                                <div class="username">LSSOUTO</div>
+                                <div class="user-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime fugiat magni, soluta libero quam voluptatibus officiis quo dolorum nostrum sit, saepe assumenda! Laborum obcaecati, hic aperiam laudantium, quae iusto similique.</div>
                             </div>
                         </li>
                     </ul>
@@ -66,5 +67,8 @@ export default {
 
 img{
     width: 100%;
+}
+.username,.user-text{
+    display:block;
 }
 </style>

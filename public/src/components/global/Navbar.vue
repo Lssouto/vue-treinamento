@@ -11,6 +11,7 @@
           <li><router-link to="/Games/adicionar">Adicionar</router-link></li>
         </ul>
       </li>
+      <li><router-link to="/Buttons" >Buttons</router-link></li>
     </ul>
     
   </div>

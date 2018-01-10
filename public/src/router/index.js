@@ -7,8 +7,9 @@ import Logout from '@/components/global/Logout'
 import Games from  '@/components/views/Games'
 import GamesAdd from  '@/components/views/GamesAdd'
 import GamesView from  '@/components/views/GamesView'
-import Modal from '@/components/general/Modal'
+import Buttons from  '@/components/views/Buttons'
 import c404 from '@/components/error/404'
+
 Vue.use(Router)
 
 export default new Router({
@@ -55,6 +56,12 @@ export default new Router({
       name: 'Game',
       component: GamesView,
       meta: {title: 'Games'}
+    },
+    {
+      path: '/buttons',
+      name: 'Buttons',
+      component: Buttons,
+      meta: {title: 'Buttons Examples'}
     },
     {
       path: "*",

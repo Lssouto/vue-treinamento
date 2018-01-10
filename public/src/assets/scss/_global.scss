@@ -144,11 +144,12 @@ body{
 .container-fluid{
     margin: 10px 5px;
 }
+
 .btn{
     border-radius: 0px;
     border: 0px;
     margin-top: 5px; 
-    padding: 0px 22px;
+    padding: 2px 22px;
     height: 48px;
     font-weight: bolder;
     font-size: 18px;
@@ -157,7 +158,7 @@ body{
     
     &.btn-effect{
         
-        box-shadow: 0 6px $black;
+        box-shadow: 0 4px $black;
         border-radius: 6px;
         
         overflow: hidden;
@@ -172,6 +173,7 @@ body{
         }
         &:hover{
             font-size: 20px;
+            padding: 0px 17px;
         }
         &._pass-by{
             
@@ -182,6 +184,7 @@ body{
                 width: 100%;
                 height: 100%;
                 opacity: 1;
+                @extend .fast-e;
             }
             
             &._left{

@@ -21,7 +21,7 @@
                                            gameId: game.id
                                        }
                                    })">
-                           Ver mais
+                           Ver Mais
                        </button>
                        
                    </div>
