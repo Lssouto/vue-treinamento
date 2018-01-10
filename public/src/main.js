@@ -12,6 +12,8 @@ import '../node_modules/vuetify/dist/vuetify.min.css'
 import './assets/scss/main.scss'
 import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss'
 
+
+
 Vue.config.productionTip = false
 
 //Global Style
@@ -25,7 +27,9 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: { App }
+  components: { 
+    App
+  }
 })
 
 router.beforeEach((to, from, next) => {
