@@ -157,9 +157,6 @@ body{
     
     &.btn-effect{
         
-        background-color: $main;
-        color: $white;
-        
         box-shadow: 0 6px $black;
         border-radius: 6px;
         
@@ -173,12 +170,15 @@ body{
         &:active{
             transform: translateY(4px);
         }
+        &:hover{
+            font-size: 20px;
+        }
         &._pass-by{
             
             &:after{
                 content: "";
                 position: absolute;
-                background-color: rgba($white,0.4);
+                background-color: rgba($white,0.2);
                 width: 100%;
                 height: 100%;
                 opacity: 1;
@@ -212,8 +212,8 @@ body{
                 }
             }
             
-            &:active {
-            
+            &:hover {
+                transform: translate(0);
                 &:after{
                     opacity: 1;
                     transition: 0;
@@ -221,23 +221,23 @@ body{
                 
                 &._left{
                     &:after{
-                        left: 0;
+                        left: 100%;
                     }
                 }
                 &._right{
                     &:after{
-                        right: 0;   
+                        right: 100%;   
                     }
                 }
                 &._top{
                     &:after{
-                        top: 0;   
+                        top: 100%;   
                     }
                 }
                 
                 &._bottom{
                     &:after{
-                        bottom: 0;   
+                        bottom: 100%;   
                     }
                 }
             }
@@ -248,7 +248,7 @@ body{
             &:after{
                 content: "";
                 position: absolute;
-                background-color: rgba($white,0.4);
+                background-color: rgba($white,0.2);
                 width: 100%;
                 height: 100%;
                 opacity: 1;
@@ -319,5 +319,28 @@ body{
             }
         }
         
+        &._pulse{
+            
+            &:after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                background-color: rgba($white,0.2);
+                width: 0;
+                height: 100%;
+                
+            }
+            
+            &:hover{
+                transform: translate(0);
+                &:after{
+                    width: 150%;
+                }
+                
+            }
+        }
+    
     }
 }
