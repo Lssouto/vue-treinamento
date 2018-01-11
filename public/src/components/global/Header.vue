@@ -1,9 +1,9 @@
 <template>
-  <header class="row flex-wrap">
-    <div class="col-md-10">
-      <h2>Bora Treinar o/</h2>
+  <header class="row">
+    <div class="col-md-2 logo">
+      LSSouto
     </div>
-    <div class="col-md-2 text-right">
+    <div class="col-md-10 text-right">
       <span v-if="!$store.state.isUserLoggedIn"><router-link to="/Login">Login</router-link></span>
       <span v-else="$store.state.isUserLoggedIn"><router-link to="/Logout">Logout</router-link></span>
     </div>

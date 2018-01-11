@@ -10,7 +10,7 @@ import Vuetify from '../node_modules/vuetify'
 import '../node_modules/vuetify/dist/vuetify.min.css'
 
 import './assets/scss/main.scss'
-import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss'
+
 
 
 

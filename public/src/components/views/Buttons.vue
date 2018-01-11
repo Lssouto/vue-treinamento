@@ -46,7 +46,7 @@ export default {
         'chrome-picker': Chrome
     },
     mounted : function(){
-        this.$el.style.setProperty('--colorEffect', 'rgba(255,255,255,0.2)')
+        this.$el.style.setProperty('--colorEffect', 'rgba(0,0,0,0.4)')
     },
     methods:{
         changeColor : function(){
