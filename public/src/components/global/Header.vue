@@ -1,7 +1,7 @@
 <template>
   <header class="row">
     <div class="col-md-2 logo">
-      LSSouto
+      <img src="/src/assets/images/owl-logo.svg"></img>LSSouto
     </div>
     <div class="col-md-10 text-right">
       <span v-if="!$store.state.isUserLoggedIn"><router-link to="/Login">Login</router-link></span>

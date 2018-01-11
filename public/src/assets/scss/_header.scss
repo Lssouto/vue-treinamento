@@ -9,7 +9,14 @@ header{
 	
 	.logo{
 		background-color: lighten($black, 15%);	
-		text-align: center;
+		padding-left: 65px;
+		img{
+			height: 65px;
+			position: absolute;
+			left: 12px;
+			top: -15px;
+			
+		}
 	}
 	& > div {
 		padding: 10px 15px;
