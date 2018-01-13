@@ -2,15 +2,16 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700');
 
 @import '../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
-@import '../../../node_modules/vuetify/dist/vuetify.min.css';
+// @import '../../../node_modules/vuetify/dist/vuetify.min.css';
 
 @import "vars";
 
 #app{
-    @import "header";
-    @import "nav";
     @import "global";
     @import "medias";
+    @import "views/header";
+    @import "views/nav";
+    @import "views/index";
     
     @import "components/spin-btn";
     @import "components/modal";

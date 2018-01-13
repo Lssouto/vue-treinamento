@@ -1,0 +1,58 @@
+.img-animation{
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  img{
+    height: 400px;
+    display: block;
+    left:0;
+    position: absolute;
+    &.blink{
+      animation: blink 7s infinite;
+      animation-timing-function: steps(1);
+    }
+    @keyframes blink {
+      0%   {left: 0px;}
+      12%  {left: -400px;}
+      14%  {left: -800px;}
+      16%  {left: -400px;}
+      18%  {left: 0;}
+      32%  {left: -400px;}
+      34%  {left: -800px;}
+      36%  {left: -400px;}
+      38%  {left: 0;}
+      100% {left: 0;}
+    }
+  }
+}
+
+.welcome-container {
+  margin-top: 120px;
+}
+.container-typewriter{
+    display: inline-block;
+    overflow: hidden;
+    span{
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0;
+    }
+}
+span.blink-caret{
+    
+    padding: 0 10px 0 0;
+    display: inline-block;
+    border-right: .15em solid $black;
+    animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes max-size{
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $black; }
+}

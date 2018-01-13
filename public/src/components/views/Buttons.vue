@@ -86,8 +86,10 @@ export default {
     margin-bottom: 15px;
     width: 49%;
 }
+
 #buttons .btn.btn-effect{
     margin-top: 25px;
+    
     h3{
         margin: 0;
     }
