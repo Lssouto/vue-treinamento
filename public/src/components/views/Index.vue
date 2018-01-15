@@ -11,7 +11,7 @@
           
           <div class="col-md-7">
             <div class="welcome-container">
-              <h2><typewriter text="Welcome to a Vue Painel ^.^" /></h2>
+              <h2><typewriter text="Welcome to a Vue Painel ^.^" type="both" delay=500 /></h2>
               <h2><typewriter text="This is the OWL" start="2000" /></h2>
               <h2><typewriter text="^.~" start="4000" duration="500" /></h2>
               <h2><typewriter text="our mascot" start="4500" duration="800" /></h2>

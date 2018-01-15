@@ -15,36 +15,86 @@ export default {
     },
     mounted (){
         let self = this;
-        let texto = this.text;
+        let content = this.text;
         
-        setTimeout(function(){
-            self.typewriter(texto, (self.duration || 2000));
-        },(this.start || 0))
+        switch (this.type){
+            
+            case 'reverse':
+                setTimeout(function(){
+                    self.typeDelete(content, (self.duration || 2000));
+                },(this.start || 0));
+                break;
+            
+            case 'both':
+                this.bothType(content, (self.duration || 2000),this.delay)
+                break;
+            
+            default: 
+                setTimeout(function(){
+                    self.typeWriter(content, (self.duration || 2000));
+                },(this.start || 0));
+                break;
+        }
+        
     },
     methods : {
-        typewriter : function(texto,duration)  {
-            let index = 0;
+        typeWriter : function(content,duration)  {
             let self = this;
-            let size = texto.length;
+            let size = content.length;
             let timePerChar = duration / size;
             
             for(let index = 0 ; index <= size ; index++){
                 setTimeout(function(){
-                    self.newValue(index , texto)
+                    self.newValue(index , content)
                 },timePerChar*index);
             } 
         
         },
-        newValue : function(position, texto){
-            this.value = texto.substring(0,position);
-            if(position == texto.length)
-                this.blinkCaret = false;
+        typeDelete : function(content,duration){
+            let self = this;
+            let size = content.length;
+            let timePerChar = duration / size;
+            
+            for(let index = size ; index >= 0 ; index--){
+                setTimeout(function(){
+                    self.newValue(index , content)
+                    
+                },(timePerChar*(size - index)));
+            } 
+        },
+        bothType : function(content,duration,delay){
+            let self = this;
+            
+            duration = duration / 2;
+            
+            this.typeWriter(content, duration);
+            
+            setTimeout(function(){
+                self.typeDelete(content, duration);
+            },duration + parseInt(delay));
+            
+        },
+        newValue : function(position, content){
+            this.value = content.substring(0,position);
+            if(position == content.length)
+                this.removeBlinkCaret()
+        },
+        removeBlinkCaret : function(){
+            this.blinkCaret = false;
+        },
+        isContentArray : function(value){
+            //the RegExp slow blank spaces between the ' and , 
+            return value.split(/\'(?:\s*)\,(?:\s*)\'/).map(function(position){
+                return position.replace(/'/g,'');
+            })
         }
     },
     props : [
         'text',
         'duration',
-        'start'
+        'start',
+        'type',
+        'delay'
     ]
 }
 </script>
