@@ -26,7 +26,9 @@ export default {
                 break;
             
             case 'both':
-                this.bothType(content, (self.duration || 2000),this.delay)
+                setTimeout(function(){
+                    self.bothType(content, (self.duration || 2000),self.delay)
+                },(this.start || 0))
                 break;
             
             default: 
@@ -66,12 +68,12 @@ export default {
             let self = this;
             
             duration = duration / 2;
-            
+
             this.typeWriter(content, duration);
             
             setTimeout(function(){
                 self.typeDelete(content, duration);
-            },duration + parseInt(delay));
+            },(duration + parseInt(delay)));
             
         },
         newValue : function(position, content){
@@ -83,7 +85,7 @@ export default {
             this.blinkCaret = false;
         },
         isContentArray : function(value){
-            //the RegExp slow blank spaces between the ' and , 
+            //the RegExp allow blank spaces between the ' and , 
             return value.split(/\'(?:\s*)\,(?:\s*)\'/).map(function(position){
                 return position.replace(/'/g,'');
             })
