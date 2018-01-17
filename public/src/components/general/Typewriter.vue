@@ -27,7 +27,7 @@ export default {
             
             case 'both':
                 setTimeout(function(){
-                    self.bothType(content, (self.duration || 2000),self.delay)
+                    self.typeBoth(content, (self.duration || 2000),self.delay)
                 },(this.start || 0))
                 break;
             
@@ -60,11 +60,10 @@ export default {
             for(let index = size ; index >= 0 ; index--){
                 setTimeout(function(){
                     self.newValue(index , content)
-                    
                 },(timePerChar*(size - index)));
             } 
         },
-        bothType : function(content,duration,delay){
+        typeBoth : function(content,duration,delay){
             let self = this;
             
             duration = duration / 2;

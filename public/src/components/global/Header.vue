@@ -4,8 +4,8 @@
       <img src="/src/assets/images/owl-logo.svg"></img>LSSouto
     </div>
     <div class="col-md-10 text-right">
-      <span v-if="!$store.state.isUserLoggedIn"><router-link to="/Login">Login</router-link></span>
-      <span v-else="$store.state.isUserLoggedIn"><router-link to="/Logout">Logout</router-link></span>
+      <span v-if="!$store.state.isUserLoggedIn"><router-link to="/Login" class="userOption">Login</router-link></span>
+      <span v-else="$store.state.isUserLoggedIn"><router-link to="/Logout" class="userOption">Logout</router-link></span>
     </div>
   </header>
 </template>
