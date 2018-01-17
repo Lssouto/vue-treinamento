@@ -13,7 +13,6 @@
       </li>
       <li><router-link to="/Buttons" >Buttons</router-link></li>
     </ul>
-    
   </div>
 </template>
 

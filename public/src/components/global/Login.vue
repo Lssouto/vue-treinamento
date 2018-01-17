@@ -1,16 +1,12 @@
 <template>
   <div id="login"> 
-    <modal>
-      <div slot="data">
-        <h2>Login</h2>
-        <form action="">
-          <input type="text" name="email" placeholder="Email" v-model="credential.user" class="form-control"/> <br>
-          <input type="password" name="password" placeholder="Password" v-model="credential.pwd" class="form-control" /><br>
-          <button type="button" v-on:click="login" class="btn btn-success">Logar</button> <br>
-        </form>
-        <h2 v-if="msg != 'default' " class="msg" v-bind:class="{error : msg, success : !msg}">{{msg}}</h2>
-      </div>
-    </modal>
+    <h2>Login</h2>
+    <form action="">
+      <input type="text" name="email" placeholder="Email" v-model="credential.user" class="form-control"/> <br>
+      <input type="password" name="password" placeholder="Password" v-model="credential.pwd" class="form-control" /><br>
+      <button type="button" v-on:click="login" class="btn btn-success">Logar</button> <br>
+    </form>
+    <h2 v-if="msg != 'default' " class="msg" v-bind:class="{error : msg, success : !msg}">{{msg}}</h2>
   </div>
 </template>
 
@@ -56,7 +52,9 @@ export default {
       } catch (e) {
         console.log("Um Erro Ocorreu" + e)
       }
-    }
+    },
+    
+    
   },
   mounted () {
     setTimeout(()=>{

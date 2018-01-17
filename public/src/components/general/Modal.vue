@@ -1,8 +1,11 @@
 <template>
-    <div id="modal" class="modal" >
+    <div id="modal" class="modal" v-if="visible" >
         <div class="mask" v-on:click="close()"></div>
         <div class="modal-content">
-            <slot name="data">No Data Found</slot>
+            <div class="content-container">
+                <slot name="close-option"><button class="close-btn btn" @click="close()">X</button></slot>
+                <slot name="data">No Data Found</slot>
+            </div>
         </div>
     </div>
 </template>
@@ -10,11 +13,14 @@
 <script>
 export default {
     name : 'Modal',
-    methods : {
+    methods: {
         close(){
-            this.$router.go(-1)
+            this.$emit('visible-change', !this.visible)
         }
-    }
+    },
+    props : [
+        'visible'
+    ]
 }
 </script>
 

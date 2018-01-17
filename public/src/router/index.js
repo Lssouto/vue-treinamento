@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Index from '@/components/views/Index'
 import Register from '@/components/views/Register'
 import Login from '@/components/global/Login'
-import Logout from '@/components/global/Logout'
 import Games from  '@/components/views/Games'
 import GamesAdd from  '@/components/views/GamesAdd'
 import GamesView from  '@/components/views/GamesView'
@@ -32,12 +31,6 @@ export default new Router({
       component: Login,
       meta: {title: 'Login'}
       
-    },
-    {
-      path: '/logout',
-      name: 'Logout',
-      component: Logout,
-      meta: {title: 'Logout'}
     },
     {
       path: '/games',
