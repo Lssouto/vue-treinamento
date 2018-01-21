@@ -12,6 +12,7 @@
         </ul>
       </li>
       <li><router-link to="/Buttons" >Buttons</router-link></li>
+      <li><router-link to="/slc" >Carousel</router-link></li>
     </ul>
   </div>
 </template>

@@ -10,14 +10,13 @@
                     
                 </div>
             </div>
-            
             <div class="row">   
                 <div class="col-md-12">
                     Comentários
                     <ul class="row">
                         <li class="list-simple">
                             <div class="col-md-1">
-                                
+                                <img src="/src/assets/images/owl-logo.svg" alt="">
                             </div>
                             <div class="col-md-11">
                                 <div class="username">LSSOUTO</div>

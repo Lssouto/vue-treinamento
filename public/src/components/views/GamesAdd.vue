@@ -34,7 +34,6 @@
                 </div>
            </painel>
        </div>
-       
    </div>
 </template>
 

@@ -1,9 +1,22 @@
 const data = require('../model/data')
 
 module.exports = { 
-    getAll  : (req,res) => {
+    getGame  : (req,res) => {
         try {
-            res.send(data.games)
+            
+            let games = null;
+            const searchKey = req.query.searchKey
+            
+            if(searchKey){
+                games = (data.games).filter(function(value){
+                    return value.id == searchKey 
+                })
+            }
+            else{
+                games = data.games
+            }
+            
+            res.send(games);
         } catch (e) {
             res.status(500).send("Ocorreu um erro ao receber os jogos: " + e)
         }

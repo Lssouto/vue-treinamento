@@ -18,7 +18,7 @@ module.exports = (router)=>{
   router.all(config.data.api+'*', _all),
   router.post(config.data.api+'/register', AuthCtrl.register),
   router.post(config.data.api+'/login', AuthCtrl.login),
-  router.get(config.data.api+'/games', GamesCtrl.getAll)
+  router.get(config.data.api+'/games', GamesCtrl.getGame)
   router.post(config.data.api+'/games', GamesCtrl.create)
   router.get(config.data.api+'/games/:id', GamesCtrl.show)
   

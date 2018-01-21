@@ -3,10 +3,11 @@ import Router from 'vue-router'
 import Index from '@/components/views/Index'
 import Register from '@/components/views/Register'
 import Login from '@/components/global/Login'
-import Games from  '@/components/views/Games'
+import Games from  '@/components/views/Games/Index'
 import GamesAdd from  '@/components/views/GamesAdd'
 import GamesView from  '@/components/views/GamesView'
 import Buttons from  '@/components/views/Buttons'
+import SC from  '@/components/views/SlickCarousel'
 import c404 from '@/components/error/404'
 
 Vue.use(Router)
@@ -57,6 +58,12 @@ export default new Router({
       meta: {title: 'Buttons Examples'}
     },
     {
+      path: '/slc',
+      name: 'Slick Carousel',
+      component: SC,
+      meta: {title: 'Slick Carousel'}
+    },
+    {
       path: "*",
       name: '404',
       component: c404,
@@ -65,4 +72,5 @@ export default new Router({
   ],
   mode: 'history'
 })
+
 

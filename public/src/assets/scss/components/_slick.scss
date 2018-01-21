@@ -1,0 +1,40 @@
+
+
+.slick-container{
+    width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    
+    img{
+        height: auto;
+        width: 100%;
+    }
+    .btn{
+        background: #123123;
+        color: #fff;
+    }  
+    .slick-prev{
+        position: absolute;
+        left: -80px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+    }
+    .slick-next{
+        position: absolute;
+        right: -80px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+    }
+    .slick-slide{
+        margin: 0 15px;
+        height: 340px;
+        background : $black;
+        
+        .slick-item{
+            padding: 15px;    
+            
+        }
+    }
+}
