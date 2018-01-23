@@ -1,7 +1,7 @@
 <template>
     <div id="spin-btn" class="spin-btn">
         <div class="content-container">
-            <router-link :to="link" >
+            <router-link :to="{name: link}" >
                 <div class="text-container" :class="[start, [ (end == 'left')? 'left-side' : 'right-side' ],  [speed == 'fast' ?  'fast-e' : 'slow-e']]">
                     <div class="text">
                         <slot name="text">

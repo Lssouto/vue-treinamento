@@ -59,6 +59,15 @@ export default {
   components : {
     Painel
   }
+  // ,
+  // watch :{
+  //   'credential' : {
+  //     deep: true,
+  //     handler: function (){
+  //       console.log(this.credential) 
+  //     }
+  //   }
+  // }
 }
 </script>
 

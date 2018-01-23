@@ -55,8 +55,6 @@ export default {
             this.games = "Error"
             console.log(e);
         }
-    },
-    methods: {
     }
 }
 </script>

@@ -10,18 +10,17 @@
                    <div class="desc">
                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quos incidunt dicta. Cum dicta, veniam voluptatibus reiciendis deserunt ipsam rem harum magnam voluptatum numquam perferendis, tempora non doloribus repudiandae sunt!
                    </div>
-                   
-                   <button 
-                        type="button" 
-                        class="btn btn-success btn-more  btn-effect _pulse"
-                        v-on:click="navigateTo({
-                                   name: 'Game',
-                                   params: {
-                                       gameId: game.id
-                                   }
-                               })">
-                       Ver Mais
-                   </button>
+                   <router-link 
+                   tag="button"
+                   class="btn btn-success btn-more  btn-effect _pulse"
+                   :to="{
+                        name: 'Game',
+                        params: {
+                           gameId: game.id
+                        } 
+                   }">
+                   Ver Mais
+                   </router-link>
                    
                </div>
            </li>
@@ -32,7 +31,7 @@
        </div>
        
         <div class="adicionar-item">
-            <spin-btn link="games/adicionar" start="deg-90" end="left" speed="fast">
+            <spin-btn link="GamesAdd" start="deg-90" end="left" speed="fast">
                 <div slot="text">Adicionar</div>
                 <div slot="symbol">+</div>
             </spin-btn>
@@ -49,12 +48,7 @@ export default {
     },
     props : [
         'games'
-    ],
-    methods : {
-        navigateTo : function(router){
-            this.$router.push(router);
-        }
-    }
+    ]
 }
 </script>
 
