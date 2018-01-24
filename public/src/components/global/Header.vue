@@ -4,15 +4,15 @@
       <img src="/src/assets/images/owl-logo.svg"></img>LSSouto
     </div>
     <div class="col-md-10 text-right">
-      <span v-if="!$store.state.isUserLoggedIn">
+      <span v-if="!isUserLoggedIn">
         <button class="userOption" @click="showModal('login')">Login</button>
         <modal :visible="isModalLoginVisible" @visible-change="modalVisible" >
           <div slot="data">
-            <login></login>
+            <login @loggedIn="modalLogoutVisible"></login>
           </div>
         </modal>
       </span>
-      <span v-else="$store.state.isUserLoggedIn">
+      <span v-else>
         <button class="userOption" @click="showModal('logout')">Logout</button>
         <modal :visible="isModalLogoutVisible" @visible-change="modalLogoutVisible" >
           <div slot="data">
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-
+import {mapState} from 'vuex'
 import Modal from "@/components/general/Modal"
 import Login from "@/components/global/Login"
 import Logout from "@/components/global/Logout"
@@ -37,6 +37,11 @@ export default {
         isModalLoginVisible: false,
         isModalLogoutVisible: false
       }
+    },
+    computed:{
+      ...mapState([
+        'isUserLoggedIn'
+      ])
     },
     methods :{
       showModal (field){

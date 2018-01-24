@@ -45,9 +45,8 @@ export default {
           
           // this.msg = response.data;
           console.log(response.data)
-          
           this.credential = {user: '', pwd: ''}
-          this.$router.go(-1)
+          this.$emit('loggedIn', false)
         }  
       } catch (e) {
         console.log("Um Erro Ocorreu" + e)
