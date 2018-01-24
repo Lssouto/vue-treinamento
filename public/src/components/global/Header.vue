@@ -5,7 +5,7 @@
     </div>
     <div class="col-md-10 text-right">
       <span v-if="!isUserLoggedIn">
-        <button class="userOption" @click="showModal('login')">Login</button>
+        <button class="userOption" @click="modalVisible(true)">Login</button>
         <modal :visible="isModalLoginVisible" @visible-change="modalVisible" >
           <div slot="data">
             <login @loggedIn="modalLogoutVisible"></login>
@@ -13,7 +13,7 @@
         </modal>
       </span>
       <span v-else>
-        <button class="userOption" @click="showModal('logout')">Logout</button>
+        <button class="userOption" @click="modalLogoutVisible(true)">Logout</button>
         <modal :visible="isModalLogoutVisible" @visible-change="modalLogoutVisible" >
           <div slot="data">
             <logout @logout-status="modalLogoutVisible"></logout>
@@ -44,12 +44,6 @@ export default {
       ])
     },
     methods :{
-      showModal (field){
-        if(field == 'login')
-          this.isModalLoginVisible = true;
-        else
-          this.isModalLogoutVisible = true;
-      },
       modalVisible(visible){
         this.isModalLoginVisible = visible;
       },
