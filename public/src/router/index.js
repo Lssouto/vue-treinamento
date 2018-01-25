@@ -49,7 +49,8 @@ export default new Router({
       path: '/games/:gameId',
       name: 'Game',
       component: GamesView,
-      meta: {title: 'Games'}
+      meta: {title: 'Games'},
+      props: true
     },
     {
       path: '/buttons',

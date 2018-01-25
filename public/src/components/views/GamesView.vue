@@ -46,9 +46,12 @@ export default {
             msg: 'default'
         }
     },
+    props :[
+        'gameId'
+    ],
     async mounted (){
         try {
-            const gameId  = this.$store.state.route.params.gameId
+            const gameId  = this.gameId
             this.game = (await GS.show(gameId)).data
         
         } catch (e) {
