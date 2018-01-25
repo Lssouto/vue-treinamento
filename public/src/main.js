@@ -34,5 +34,18 @@ new Vue({
 
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title
-  next()
+  
+  if (to.matched.some(record=> record.meta.login)) {
+    if(!store.state.isUserLoggedIn){
+      next({
+        name : 'Login'
+      })
+    }
+    else {
+      next()
+    }
+  }
+  else{
+    next()
+  }
 })

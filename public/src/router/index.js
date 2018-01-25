@@ -6,8 +6,8 @@ import Login from '@/components/global/Login'
 import Games from  '@/components/views/Games/Index'
 import GamesAdd from  '@/components/views/GamesAdd'
 import GamesView from  '@/components/views/GamesView'
-import Buttons from  '@/components/views/Buttons'
-import SC from  '@/components/views/SlickCarousel'
+const Buttons = ()=> import('@/components/views/Buttons')
+const SC = ()=> import('@/components/views/SlickCarousel')
 import c404 from '@/components/error/404'
 
 Vue.use(Router)
@@ -24,7 +24,10 @@ export default new Router({
       path: '/register',
       name: 'Register',
       component: Register,
-      meta: {title: 'Register'}
+      meta: {
+        title: 'Register',
+        login: true
+      }
     },
     {
       path: '/login',
@@ -38,12 +41,16 @@ export default new Router({
       name: 'Games',
       component: Games,
       meta: {title: 'Games'}
+
     },
     {
       path: '/games/adicionar',
       name: 'GamesAdd',
       component: GamesAdd,
-      meta: {title: 'Adicionar Games'}
+      meta: {
+        title: 'Adicionar Games',
+        login : true
+      }
     },
     {
       path: '/games/:gameId',
