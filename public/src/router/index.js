@@ -6,6 +6,7 @@ import Login from '@/components/global/Login'
 import Games from  '@/components/views/Games/Index'
 import GamesAdd from  '@/components/views/GamesAdd'
 import GamesView from  '@/components/views/GamesView'
+import GamesEdit from  '@/components/views/GamesEdit'
 const Buttons = ()=> import('@/components/views/Buttons')
 const SC = ()=> import('@/components/views/SlickCarousel')
 import c404 from '@/components/error/404'
@@ -56,6 +57,13 @@ export default new Router({
       path: '/games/:gameId',
       name: 'Game',
       component: GamesView,
+      meta: {title: 'Games'},
+      props: true
+    },
+    {
+      path: '/games/edit/:gameId',
+      name: 'GameEdit',
+      component: GamesEdit,
       meta: {title: 'Games'},
       props: true
     },

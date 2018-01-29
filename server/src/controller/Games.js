@@ -37,7 +37,18 @@ module.exports = {
                 return game.id == req.params.id
             }))
         } catch (e) {
-            res.status(500).send("Ocorreu um erro ao adicionar o jogo :" + e)
+            res.status(500).send("Ocorreu um erro ao retornar o jogo :" + e)
+        }
+    },
+    update : (req,res) =>{
+        try {
+            let position = (data.games).findIndex((game)=>{
+                return game.id == req.params.id
+            })
+            data.games.splice(position,1,req.body)
+            res.send("Atualizado")
+        } catch (e) {
+            res.status(500).send("Ocorreu um erro ao atualizar o jogo :" + e)
         }
     }
 }

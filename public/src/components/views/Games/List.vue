@@ -5,11 +5,14 @@
                <div class="col-md-3 list-img">
                    <img v-bind:src="game.imgUrl" />
                </div>
-               <div class="col-md-9 list-desc">
+               <div class="col-md-8 list-desc">
                    <div class="title"> {{game.title}}  - {{game.ano}}  </div>
                    <div class="desc">
                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quos incidunt dicta. Cum dicta, veniam voluptatibus reiciendis deserunt ipsam rem harum magnam voluptatum numquam perferendis, tempora non doloribus repudiandae sunt!
                    </div>
+                   
+               </div>
+               <div class="col-md-1">
                    <router-link 
                    tag="button"
                    class="btn btn-success btn-more  btn-effect _pulse"
@@ -19,9 +22,19 @@
                            gameId: game.id
                         } 
                    }">
-                   Ver Mais
+                   +
                    </router-link>
-                   
+                   <router-link 
+                   tag="button"
+                   class="btn btn-success btn-editar  btn-effect _pulse"
+                   :to="{
+                        name: 'GameEdit',
+                        params: {
+                           gameId: game.id
+                        } 
+                   }">
+                   Edit
+                   </router-link>
                </div>
            </li>
        </ul>

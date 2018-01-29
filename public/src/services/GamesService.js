@@ -13,6 +13,9 @@ export default {
     },
     show (id){
         return Api().get('games/'+id)
+    },
+    update (game){
+        return Api().put('games/'+game.id,game)
     }
 
 }
