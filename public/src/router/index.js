@@ -4,9 +4,9 @@ import Index from '@/components/views/Index'
 import Register from '@/components/views/Register'
 import Login from '@/components/global/Login'
 import Games from  '@/components/views/Games/Read/Index'
-import GamesAdd from  '@/components/views/Games/GamesAdd'
-import GamesView from  '@/components/views/Games/GamesView'
-import GamesEdit from  '@/components/views/Games/GamesEdit'
+import GamesAdd from  '@/components/views/Games/Add'
+import GamesView from  '@/components/views/Games/View'
+import GamesEdit from  '@/components/views/Games/Edit'
 const Buttons = ()=> import('@/components/views/Buttons')
 const SC = ()=> import('@/components/views/SlickCarousel')
 import c404 from '@/components/error/404'
