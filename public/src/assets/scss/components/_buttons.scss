@@ -20,7 +20,7 @@
     &.btn-effect{
         
         box-shadow: 0 4px 2px $black;
-        border-radius: 6px;
+        //border-radius: 6px;
         
         overflow: hidden;
         
@@ -74,7 +74,6 @@
             }
             
             &:hover {
-                
                 &:after{
                     opacity: 1;
                     transition: 0;

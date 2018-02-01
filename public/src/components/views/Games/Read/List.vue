@@ -1,7 +1,7 @@
 <template>
     <div id="GamesList">
-        <ul v-if="!(games === 'Error')" class="row">
-           <li v-for="game in games" class="list-img-desc">
+        <ul v-if="!(data === 'Error')" class="row">
+           <li v-for="game in data" class="list-img-desc">
                <div class="col-md-3 list-img">
                    <img v-bind:src="game.imgUrl" />
                </div>
@@ -60,7 +60,7 @@ export default {
         SpinBtn
     },
     props : [
-        'games'
+        'data'
     ]
 }
 </script>

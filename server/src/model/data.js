@@ -1,5 +1,8 @@
 let _usuarios = [
-        { user: 'admin', password: 'admin'}
+        { id : 1, user: 'admin', password: 'admin'},
+        { id : 2, user: 'lucas', password: '123'},
+        { id : 3, user: 'diego', password: '123'},
+        { id : 4, user: 'teste', password: '123'}
     ];
 let _games = [
         {

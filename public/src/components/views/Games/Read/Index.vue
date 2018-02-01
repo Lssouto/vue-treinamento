@@ -4,29 +4,29 @@
            <div class="row">
                <search  class="col-md-6 col-md-push-3" />
            </div>
-           <games-list :games="games"/>
+           <list :data="data"/>
         </div>
     </div>
 </template>
 
 <script>
 import GS from "@/services/GamesService"
-import GamesList from "./List"
+import List from "./List"
 import Search from "./Search"
 
 export default {
-    name: 'Game',
+    name: 'Games',
     data (){
         return {
-            title: "Games Area",
-            games: []
+            title: "Gamming Area",
+            data: []
         }
     },
     async mounted (){
         try {
-            this.games = (await GS.read()).data
+            this.data = (await GS.read()).data
         } catch (e) {
-            this.games = "Error"
+            this.data = "Error"
             console.log(e);
         }
     },
@@ -34,12 +34,12 @@ export default {
         '$store.state.route.query.search' :{
             immediate: true,
             async handler (value){
-                this.games = (await GS.read(value)).data
+                this.data = (await GS.read(value)).data
             }
         }  
     },
     components : {
-        GamesList,
+        List,
         Search
     }
 }

@@ -24,29 +24,6 @@ const _verify = (value)=>{
 }
 
 module.exports = { 
-    register  : (req,res) => {
-        try {
-            let verifyResult = _verify(req.body)
-            
-            if(verifyResult.status)
-               res.send({
-                   status: false,
-                   msg: "Usuário já Cadastrado",
-                   user: verifyResult.user.user,
-               }) 
-               
-            else{
-                data.usuarios.push(req.body)
-                res.send({
-                    status: true,
-                    msg: "Novo usuário Cadastrado",
-                    user: verifyResult.user
-                })
-            }
-        } catch (e) {
-            res.status(500).send("Ocorreu um erro ao registrar: " + e)
-        }
-    },
     login : (req,res) => {
         try {
             let verifyResult = _verify(req.body)

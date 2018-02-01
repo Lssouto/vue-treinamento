@@ -17,6 +17,7 @@ export default {
       if(arguments[0] === true){
         this.$store.dispatch('setToken', null)
         this.$store.dispatch('setUser', null)
+        this.$router.push({name: 'Index'})
       }
       else
         this.$emit('logout-status',false);

@@ -2,7 +2,16 @@
   <div id="navbar">
     <ul>
       <li><router-link :to="{name: 'Index'}" >Home</router-link></li>
-      <li v-if="isUserLoggedIn"><router-link :to="{name: 'Register'}" >Register</router-link></li>
+      <li v-if="isUserLoggedIn">
+        <router-link :to="{name: 'Read Users'}" >Users</router-link>
+        <!--<input type="checkbox" name="users" id="users" />-->
+        <!--<label for="users">Users</label>-->
+        <!--<ul>-->
+        <!--  <li><router-link :to="{name: 'Read Users'}" >Listar</router-link></li>-->
+        <!--  <li><router-link :to="{name: 'Create User'}" >Adicionar</router-link></li>-->
+        <!--</ul>-->
+        
+      </li>
       <li>
         <input type="checkbox" name="games" id="games" />
         <label for="games">Games</label>

@@ -1,15 +1,29 @@
+//Vue imports
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/components/views/Index'
-import Register from '@/components/views/Register'
-import Login from '@/components/global/Login'
-import Games from  '@/components/views/Games/Read/Index'
-import GamesAdd from  '@/components/views/Games/Add'
-import GamesView from  '@/components/views/Games/View'
-import GamesEdit from  '@/components/views/Games/Edit'
-const Buttons = ()=> import('@/components/views/Buttons')
-const SC = ()=> import('@/components/views/SlickCarousel')
-import c404 from '@/components/error/404'
+
+//Views
+
+  //index
+  import Index from '@/components/views/Index'
+  
+  //User
+  import Login from '@/components/global/Login'
+  //import UserCreate from '@/components/views/Users/Create'
+  import UserRead from '@/components/views/Users/Read/Index'
+  
+  //Games
+  import Games from  '@/components/views/Games/Read/Index'
+  import GamesAdd from  '@/components/views/Games/Create'
+  import GamesView from  '@/components/views/Games/View'
+  import GamesEdit from  '@/components/views/Games/Update'
+
+  //Individual components
+  const Buttons = ()=> import('@/components/views/Buttons')
+  const SC = ()=> import('@/components/views/SlickCarousel')
+
+  //Error
+  import c404 from '@/components/error/404'
 
 Vue.use(Router)
 
@@ -22,14 +36,23 @@ export default new Router({
       meta: {title: 'Home'}
     },
     {
-      path: '/register',
-      name: 'Register',
-      component: Register,
+      path: '/users',
+      name: 'Read Users',
+      component: UserRead,
       meta: {
-        title: 'Register',
+        title: 'Listagem',
         login: true
       }
     },
+    // {
+    //   path: '/user/new',
+    //   name: 'Create User',
+    //   component: UserCreate,
+    //   meta: {
+    //     title: 'Adicionar',
+    //     login: true
+    //   }
+    // },
     {
       path: '/login',
       name: 'Login',

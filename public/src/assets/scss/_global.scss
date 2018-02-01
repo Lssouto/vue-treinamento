@@ -147,3 +147,33 @@
     right: 15px;
 }
 
+.list-table{
+    li{
+        @extend .flex-wrap;
+        
+        
+        padding: 10px 0;
+        position: relative;
+        width: 100%;
+        & > div{
+            margin: auto;
+        }
+        &:after{
+            content: "";
+            width: 95%;
+            height: 1px;
+            background-color: $light-gray;
+            display: block;
+            position: absolute;
+            left: 2.5%;
+            bottom: -2px;
+        }
+        .btn{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            min-width: 100%;
+            height: 40px;
+        }
+    }
+}
