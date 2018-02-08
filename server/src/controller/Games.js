@@ -9,7 +9,7 @@ module.exports = {
             
             if(searchKey){
                 games = (data.games).filter(function(value){
-                    return value.id == searchKey 
+                    return ((value.title).indexOf(searchKey) !== -1 || value.id == searchKey || value.ano == searchKey ) 
                 })
             }
             else{

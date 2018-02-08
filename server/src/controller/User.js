@@ -51,7 +51,7 @@ module.exports = {
             const searchKey = req.query.searchKey
             if(searchKey){ 
                 let user =  (data.usuarios).filter((user)=>{
-                    return user.id == searchKey
+                    return ((user.user).indexOf(searchKey) !== -1 || user.id == searchKey); 
                 })
                 res.send({
                     status: true,
