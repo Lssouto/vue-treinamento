@@ -5,7 +5,7 @@
           
           <div class="col-md-5">
             <div class="img-animation">
-              <img src="/src/assets/images/owl-logo-blink.png" alt="" class="blink">
+              <img src="../../assets/images/owl-logo-blink.png" alt="" class="blink">
             </div>
           </div>
           

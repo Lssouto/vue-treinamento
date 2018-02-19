@@ -1,7 +1,7 @@
 <template>
   <header class="row m-0">
     <div class="col-md-2 logo">
-      <img src="/src/assets/images/owl-logo.svg"></img>LSSouto
+      <img src="../../assets/images/owl-logo.svg"></img>LSSouto
     </div>
     <div class="col-md-10 text-right">
       <span v-if="!isUserLoggedIn">
