@@ -44,15 +44,6 @@ export default new Router({
         login: true
       }
     },
-    // {
-    //   path: '/user/new',
-    //   name: 'Create User',
-    //   component: UserCreate,
-    //   meta: {
-    //     title: 'Adicionar',
-    //     login: true
-    //   }
-    // },
     {
       path: '/login',
       name: 'Login',
