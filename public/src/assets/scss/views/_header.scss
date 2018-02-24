@@ -6,22 +6,14 @@ header{
 	font-size: 22px;
 	float: none;
 	font-weight: bolder;
+	height: 52px;
 	
-	.logo{
-		background-color: lighten($black, 15%);	
-		padding-left: 65px;
-		padding: 10px 15px 10px 65px;
-		img{
-			height: 65px;
-			position: absolute;
-			left: 12px;
-			top: -15px;
-		}
-	}
 	.userOption{
 		padding: 10px 15px;
 		display: inline-block;
-		text-decoration: none;		
+		text-decoration: none;
+		background: none;
+		border: 0px;
 		&:hover{
 			text-decoration: none;		
 			background-color: rgba(255,255,255,0.3);	
@@ -31,7 +23,38 @@ header{
 		color: $white;
 		font-size: 20px;
 	}
-    .modal h2{
-        color: $black;
+	.nav-toggle{
+		position: absolute;
+		display: inline-block;
+    	top: 0;
+    	right: 0;
+    	margin: 0;
+		padding: 10px 15px;
+		font-size: 25px;
+		text-align: center;
+		background: none;
+		border: 0px;
+		color: $white;
+		&:hover{
+			color: $white;
+			text-decoration: none;		
+			background-color: rgba(255,255,255,0.3);	
+		}
     }
+    .options{
+    	padding-right: 60px;
+    }
+	@media (min-width: $sm) {
+		
+	    .nav-toggle{
+	    	position: relative;
+			padding: 10px 15px;
+			height: 100%;
+			text-align: center;
+			display: inline-block;
+	    }
+	    .options{
+	    	padding-right: 0;
+	    }
+	}
 }

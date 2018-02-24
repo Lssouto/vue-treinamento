@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <c-header></c-header>
     <div class="flex-wrap">
-      <navbar class="col-md-2 p-0" ></navbar>
-      <router-view class="col-md-10" ></router-view>
+      <navbar class="p-0" :status="navbarStatus" />
+      <div class="max">
+        <c-header @changeNav="navbarStatus = !navbarStatus" />
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
@@ -22,15 +24,10 @@ export default {
   },
   data(){
     return{
-      title: "hue"
+      title: "hue",
+      navbarStatus: false
     }
-  },
-  methods:{ 
-    
   }
 }
 
 </script>
-
-<style>
-</style>

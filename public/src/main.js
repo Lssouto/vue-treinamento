@@ -6,10 +6,9 @@ import router from './router'
 import { sync } from 'vuex-router-sync'
 import store from '@/store/store'
 
-import Vuetify from '../node_modules/vuetify'
-import '../node_modules/vuetify/dist/vuetify.min.css'
 
-import './assets/scss/main.scss'
+  import './assets/scss/main.scss'
+
 
 
 
@@ -17,8 +16,6 @@ import './assets/scss/main.scss'
 Vue.config.productionTip = false
 
 //Global Style
-
-Vue.use(Vuetify)
 
 sync( store, router )
 

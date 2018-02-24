@@ -1,14 +1,14 @@
 <template>
-  <header class="row m-0">
-    <div class="col-md-2 logo">
-      <img src="../../assets/images/owl-logo.svg"></img>LSSouto
-    </div>
-    <div class="col-md-10 text-right">
+  <header class="row m-0 flex-wrap">
+    <button class="nav-toggle btn" @click="changeNav">
+      <span class="fa fa-bars"></span>
+    </button>
+    <div class="text-right options">
       <span v-if="!isUserLoggedIn">
         <button class="userOption" @click="modalVisible(true)">Login</button>
         <modal :visible="isModalLoginVisible" @visible-change="modalVisible" >
           <div slot="data">
-            <login @loggedIn="modalLogoutVisible"></login>
+            <login @logged-in="modalLogoutVisible"></login>
           </div>
         </modal>
       </span>
@@ -49,6 +49,9 @@ export default {
       },
       modalLogoutVisible(visible){
         this.isModalLogoutVisible = visible;
+      },
+      changeNav (){
+        this.$emit('changeNav',true);
       }
     },
     components :{
@@ -56,7 +59,6 @@ export default {
       Logout,
       Modal
     }
-    
 }
 </script>
 

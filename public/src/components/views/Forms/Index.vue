@@ -1,10 +1,10 @@
 <template>
     <div class="index">
       <div class="container-fluid">
-        <div class="row"> 
+        <div class="row">
           
           <div class="col-md-5">
-            <div class="img-animation text-center">
+            <div class="img-animation">
               <img src="../../assets/images/owl-logo-blink.png" alt="" class="blink">
             </div>
           </div>

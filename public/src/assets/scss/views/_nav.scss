@@ -1,6 +1,11 @@
 #navbar{
     background: $black;
-	
+    position: fixed;
+    z-index: 9999;
+    margin-left: -100%;
+    top: 0;
+    @extend .fast-e;
+    
 	input[type="checkbox"]{
 		display: none;
 	}
@@ -14,7 +19,7 @@
 			color: $white;
 		    margin: 0px;
 			display: block;
-			padding-left: 15px;
+			padding: 0 15px;
 			line-height: 53px;
 			color: $white;
 			font-weight: bolder;
@@ -26,36 +31,71 @@
 			}
 		}
 
-		input[type="checkbox"] + label + ul{
-			@extend .fast-e;
-			position: absolute;
-			margin-left: -100%;
-		}
-		input[type="checkbox"]:checked + label + ul{
-			position: initial;
-			margin-left: 0;
+		&.dropdown-nav{
 			
-		}
-			ul{
+			input[type="checkbox"] + label + ul{
+				@extend .fast-e;
+				position: absolute;
+				margin-left: -100%;
+			}
+			input[type="checkbox"]:checked + label + ul{
+				position: initial;
+				margin-left: 0;
+			}
+			.dropdown-list{
 				background-color: $main;
 				width: 100%;
-			li{
-				a,label{
-					line-height: 25px;
-					color: $white;
-					font-weight: bolder;
-					padding-left: 45px;
-					width: 100%;
-					cursor: pointer;
-					background-color: $main-alt;
-					
-					&:hover,&:active,&:focus{
-						text-decoration: none;
-						background-color: darken($main-alt,15%);
+				li{
+					a,label{
+						line-height: 35px;
+						color: $white;
+						font-weight: bolder;
+						display: block;
+						cursor: pointer;
+						background-color: $main-alt;
+						
+						&:hover,&:active,&:focus{
+							text-decoration: none;
+							background-color: darken($main-alt,15%);
+						}
 					}
 				}
 			}
-
+		}
+		span.fa{
+			font-size: 22px;
+			margin-right: 5px;
 		}
 	}	
+	.logo{
+		position: relative;
+		background-color: lighten($black, 15%);	
+		padding: 10px 15px 10px 65px;
+		height: 52px;
+		color: $white;
+		font-size: 24px;
+		img{
+			position: absolute;
+			top: -15px;
+			left: 15px;
+			height: 65px;
+		}
+	}
+	&.expanded{
+		margin-left: 0;
+	}
+	@media (min-width:$sm){
+		position: relative;
+		z-index: 1;
+		margin-left: 0;
+		&.expanded{
+			text-align: center;
+			span.fa{
+				font-size: 26px;
+			}
+			span.name{
+				display: none;
+			}
+		}
+	}
 }

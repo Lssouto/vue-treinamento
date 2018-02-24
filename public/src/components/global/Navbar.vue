@@ -1,27 +1,45 @@
 <template>
-  <div id="navbar">
+  <div id="navbar" :class="{expanded : status}">
+    <div class="logo">
+      <img src="../../assets/images/owl-logo.svg"></img>
+      <span class="name">LSSouto</span>
+    </div>
     <ul>
-      <li><router-link :to="{name: 'Index'}" >Home</router-link></li>
-      <li v-if="isUserLoggedIn">
-        <router-link :to="{name: 'Read Users'}" >Users</router-link>
-        <!--<input type="checkbox" name="users" id="users" />-->
-        <!--<label for="users">Users</label>-->
-        <!--<ul>-->
-        <!--  <li><router-link :to="{name: 'Read Users'}" >Listar</router-link></li>-->
-        <!--  <li><router-link :to="{name: 'Create User'}" >Adicionar</router-link></li>-->
-        <!--</ul>-->
-        
-      </li>
       <li>
+        <router-link :to="{name: 'Index'}" >
+          <span class="fa fa-home"></span>
+          <span class="name">Home</span>
+        </router-link>
+      </li>
+      <li v-if="isUserLoggedIn">
+        <router-link :to="{name: 'Read Users'}" >
+          <span class="fa fa-users"></span>
+          <span class="name">Users</span>
+        </router-link>
+      </li>
+      <li class="dropdown-nav">
         <input type="checkbox" name="games" id="games" />
-        <label for="games">Games</label>
-        <ul>
+        <label for="games">
+          <span class="fa fa-gamepad"></span>
+          <span class="name">Games</span>
+        </label>
+        <ul class="dropdown-list">
           <li><router-link :to="{name: 'Games'}">Listar</router-link></li>
           <li v-if="isUserLoggedIn"><router-link :to="{name: 'GamesAdd'}">Adicionar</router-link></li>
         </ul>
       </li>
-      <li><router-link :to="{name: 'Buttons'}" >Buttons</router-link></li>
-      <li><router-link :to="{name: 'Slick Carousel'}" >Carousel</router-link></li>
+      <li>
+        <router-link :to="{name: 'Buttons'}">
+          <span class="fa fa-square"></span>
+          <span class="name">Buttons</span>
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'Slick Carousel'}" >
+          <span class="fa fa-spinner"></span>
+          <span class="name">Carousel</span>
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -39,7 +57,10 @@ export default {
     ...mapState([
       'isUserLoggedIn'
     ])
-  }
+  },
+  props: [
+    'status'
+  ]
   
 }
 

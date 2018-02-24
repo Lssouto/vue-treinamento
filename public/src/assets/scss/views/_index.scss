@@ -47,6 +47,41 @@ span.blink-caret{
     animation: blink-caret .75s step-end infinite;
 }
 
+@media (max-width: $xs) {
+  .img-animation{
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    img{
+      height: 200px;
+      display: block;
+      left:0;
+      position: absolute;
+      &.blink{
+        animation: blink 7s infinite;
+        animation-timing-function: steps(1);
+      }
+      @keyframes blink {
+        0%   {left: 0px;}
+        12%  {left: -200px;}
+        14%  {left: -400px;}
+        16%  {left: -200px;}
+        18%  {left: 0;}
+        32%  {left: -200px;}
+        34%  {left: -400px;}
+        36%  {left: -200px;}
+        38%  {left: 0;}
+        100% {left: 0;}
+      }
+    }
+  }
+  .welcome-container {
+    margin-top: 40px;
+  }
+}
+
 @keyframes max-size{
   from { width: 0 }
   to { width: 100% }
