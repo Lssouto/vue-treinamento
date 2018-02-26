@@ -4,7 +4,9 @@
       <navbar class="p-0" :status="navbarStatus" />
       <div class="max">
         <c-header @changeNav="navbarStatus = !navbarStatus" />
-        <router-view />
+        <transition name="fade">
+          <router-view />
+        </transition>
       </div>
     </div>
   </div>
@@ -31,3 +33,4 @@ export default {
 }
 
 </script>
+

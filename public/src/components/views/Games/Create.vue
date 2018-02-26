@@ -5,6 +5,7 @@
                 <div slot="data">
                     <form action="" autocomplete="off" v-on:submit.prevent="adicionar">
                         <input type="text"
+                            placeholder="Nome"
                             class="form-control"                                
                             name="titulo"
                             v-model="game.title" 

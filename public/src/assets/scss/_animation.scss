@@ -16,3 +16,16 @@
     -o-transition: all 0.4s linear 0s;
     transition: all 0.4s linear 0s;
 }
+
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.fade-enter-active {
+  transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}

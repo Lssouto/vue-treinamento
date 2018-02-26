@@ -3,8 +3,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    
     z-index: 5;
+    color: $black;
   	.mask{
   		z-index: 6;
   		width: 100%;
@@ -18,8 +18,9 @@
         position: absolute;
         left: 50%;
         top: 50%;
+        width: initial;
         background: #fff;
-        padding: 25px;
+        padding: 50px;
         text-align: center;
         transform: translate(-50%,-50%);
         z-index: 7;
@@ -29,8 +30,8 @@
             
             .close-btn{
                 position: absolute;    
-                top: -50px;
-                right: -33px;
+                top: -55px;
+                right: -50px;
                 border-radius: 6px 6px 6px 50%;
                 padding: 0px;
                 color: $black;
