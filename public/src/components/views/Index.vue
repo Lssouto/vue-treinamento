@@ -3,13 +3,13 @@
       <div class="container-fluid">
         <div class="row"> 
           
-          <div class="col-md-5">
+          <div class="col-lg-5">
             <div class="img-animation text-center">
               <img src="../../assets/images/owl-logo-blink.png" alt="" class="blink">
             </div>
           </div>
           
-          <div class="col-md-7">
+          <div class="col-lg-7">
             <div class="welcome-container">
               <h2><typewriter text="Welcome to a Vue Painel ^.^" delay="500" /></h2>
               <h2><typewriter text="This is the OWL" start="2000" /></h2>

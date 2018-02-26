@@ -34,12 +34,6 @@
           <span class="name">Buttons</span>
         </router-link>
       </li>
-      <li>
-        <router-link :to="{name: 'Slick Carousel'}" >
-          <span class="fa fa-spinner"></span>
-          <span class="name">Carousel</span>
-        </router-link>
-      </li>
     </ul>
   </div>
 </template>

@@ -14,7 +14,7 @@
 }
 
 // Flex
-.flex-wrap {
+.flex-align {
     display: flex;
     flex-direction: column;
     
@@ -81,7 +81,7 @@
 
 .list-img-desc{
     
-    @extend .flex-wrap;
+    @extend .flex-align;
     
     padding: 35px;
     position: relative;
@@ -154,7 +154,7 @@
 
 .list-table{
     li{
-        @extend .flex-wrap;
+        @extend .flex-align;
         
         
         padding: 10px 0;

@@ -4,27 +4,24 @@
             <painel title="Game add">
                 <div slot="data">
                     <form action="" autocomplete="off" v-on:submit.prevent="adicionar">
-                        <v-text-field 
+                        <input type="text"
+                            class="form-control"                                
                             name="titulo"
-                            label="Título"
                             v-model="game.title" 
                             required 
-                            :rules="[required]" 
-                        ></v-text-field>
-                        <v-text-field 
-                            type="text"
-                            label="Ano"
+                        >
+                        <input type="text"
+                            class="form-control"                                
+                            placeholder="Ano"
                             v-model="game.ano" 
                             required 
-                            :rules="[required]"
-                        ></v-text-field>
-                        <v-text-field 
-                            type="text"
-                            label="Image URL"
+                        >
+                        <input type="text"
+                            class="form-control"                            
+                            placeholder="Image URL"
                             v-model="game.imgUrl" 
-                            required 
-                            :rules="[required]"
-                        ></v-text-field>
+                            required
+                        >
                         
                         <div class="input-group-form">
                             <button type="submit" class="btn btn-success">Adicionar</button>

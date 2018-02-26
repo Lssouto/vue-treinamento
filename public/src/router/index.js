@@ -20,8 +20,7 @@ import Router from 'vue-router'
 
   //Individual components
   const Buttons = ()=> import('@/components/views/Buttons')
-  const SC = ()=> import('@/components/views/SlickCarousel')
-
+  
   //Error
   import c404 from '@/components/error/404'
 
@@ -89,12 +88,6 @@ export default new Router({
       name: 'Buttons',
       component: Buttons,
       meta: {title: 'Buttons Examples'}
-    },
-    {
-      path: '/slc',
-      name: 'Slick Carousel',
-      component: SC,
-      meta: {title: 'Slick Carousel'}
     },
     {
       path: "*",

@@ -1,5 +1,5 @@
 <template>
-  <header class="row m-0 flex-wrap">
+  <header class="row m-0 flex-align ">
     <button class="nav-toggle btn" @click="changeNav">
       <span class="fa fa-bars"></span>
     </button>

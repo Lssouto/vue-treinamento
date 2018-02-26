@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="flex-wrap">
+    <div class="flex-align">
       <navbar class="p-0" :status="navbarStatus" />
       <div class="max">
         <c-header @changeNav="navbarStatus = !navbarStatus" />
