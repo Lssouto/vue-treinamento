@@ -1,10 +1,13 @@
 <template>
     <div id="search">
-        <v-text-field 
-            name="search"
-            label="Search"
-            v-model="search" 
-        ></v-text-field>
+        <div class="input-container">
+            <input type="text"
+                name="search"
+                label="Search"
+                v-model="search"
+                class="form-control"
+            >
+        </div>
     </div>
 </template>
 

@@ -4,25 +4,28 @@
             <painel title="Game add">
                 <div slot="data">
                     <form action="" autocomplete="off" v-on:submit.prevent="adicionar">
-                        <input type="text"
-                            placeholder="Nome"
-                            class="form-control"                                
-                            name="titulo"
-                            v-model="game.title" 
-                            required 
-                        >
-                        <input type="text"
-                            class="form-control"                                
-                            placeholder="Ano"
-                            v-model="game.ano" 
-                            required 
-                        >
-                        <input type="text"
-                            class="form-control"                            
-                            placeholder="Image URL"
-                            v-model="game.imgUrl" 
-                            required
-                        >
+                        <div class="input-container">
+                            <input type="text"
+                                placeholder="Nome"
+                                class="form-control"                                
+                                name="titulo"
+                                v-model="game.title" 
+                                required>
+                        </div>
+                        <div class="input-container">
+                            <input type="text"
+                                class="form-control"                                
+                                placeholder="Ano"
+                                v-model="game.ano" 
+                                required>
+                        </div>
+                        <div class="input-container">
+                            <input type="text"
+                                class="form-control"                            
+                                placeholder="Image URL"
+                                v-model="game.imgUrl" 
+                                required>
+                        </div>
                         
                         <div class="input-group-form">
                             <button type="submit" class="btn btn-success">Adicionar</button>

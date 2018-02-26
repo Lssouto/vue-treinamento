@@ -1,8 +1,8 @@
 <template>
    <div id="games">
        <div class="container-fluid">
-           <div class="row">
-               <search  class="col-md-6 col-md-push-3" />
+           <div class="row" >
+               <search  class="col-md-6" />
            </div>
            <create @create-user="createUser" :update="update" />
            <list :data="data" @delete-user="deleteUser" @update-user="updateStatus" />

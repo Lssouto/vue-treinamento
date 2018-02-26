@@ -1,8 +1,8 @@
 <template>
    <div id="games">
-       <div class="container-fluid">
+       <div class="container-fluid relative">
            <div class="row">
-               <search  class="col-md-6 col-md-push-3" />
+               <search  class="col-md-6 " />
            </div>
            <list :data="data"/>
         </div>
