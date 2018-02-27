@@ -1,46 +1,59 @@
 <template>
-    <div class="index">
-      <div class="container-fluid">
-        <div class="row">
-          
-          <div class="col-md-5">
-            <div class="img-animation">
-              <img src="../../assets/images/owl-logo-blink.png" alt="" class="blink">
-            </div>
-          </div>
-          
-          <div class="col-md-7">
-            <div class="welcome-container">
-              <h2><typewriter text="Welcome to a Vue Painel ^.^" delay="500" /></h2>
-              <h2><typewriter text="This is the OWL" start="2000" /></h2>
-              <h2><typewriter text="^.~" start="4000" duration="500" /></h2>
-              <h2><typewriter text="our mascot" start="4500" duration="800"/></h2>
-              <h2><typewriter text="This is the ultimate mega plus advanced ..." start="5300" duration="4000" delay="600" type="both" /></h2>
-            </div>
-          </div>
-          
+  <div class="Forms">
+    <h2>In Time Validate</h2>
+    <form>
+      <div class="input-container" :class="{'error' : errors.has('name')}">
+        <label>
+          Nome: 
+          <input type="text" name="name" class="form-control" v-model="inTime.nome" v-validate="'required|alpha'" />
+        </label>
+        <div class="msg">
+          <span class="fa fa-close"></span>
         </div>
       </div>
-    </div>
-    
+      
+      <div class="input-container" :class="{'error' : errors.has('email')}">
+        <label>
+          Email: 
+          <input type="text" name="email" class="form-control" v-model="inTime.email" v-validate="'required|email'" />
+        </label>  
+        <div class="msg">
+          <span class="fa fa-close"></span>
+        </div>
+      </div>
+      
+    </form>
+  </div>
 </template>
 
 <script>
-import Typewriter from '@/components/general/Typewriter'
+
 export default {
-  name: 'index',
-  data () {
+  name: 'Forms',
+  data  (){
     return {
-      title: 'index'
+      inTime: {nome: '', email:''},
+      email: ''
     }
-  },
-  components : {
-    Typewriter
   }
 }
 </script>
 
 
 <style lang="scss">
-
+.forms{
+  padding: 25px;
+}
+.input-container{
+  position: relative;
+  .msg{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 0;
+    right: 5px;
+    border-radius: 6px;
+    color: #fff;
+  }
+}
 </style>

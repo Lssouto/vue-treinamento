@@ -199,8 +199,34 @@
 }
 .input-container{
     margin-bottom: 10px;
+    position: relative;
+    
+    label{
+        width: 100%;
+    }
+    .msg{
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 33px;
+        width: 33px;
+        color: red;
+        padding: 0;
+        text-align:center;
+        font-size: 22px;
+        border-radius: 0px;
+    }
+    &.error{
+        .msg{
+            display: block;
+        }
+    }
 }
 #search{
     margin: 0 auto;
     display: block;
+}
+.container-view{
+    padding: 25px;
 }

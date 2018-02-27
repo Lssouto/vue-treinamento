@@ -34,6 +34,12 @@
           <span class="name">Buttons</span>
         </router-link>
       </li>
+      <li>
+        <router-link :to="{name: 'Forms'}">
+          <span class="fa fa-align-justify"></span>
+          <span class="name">Forms</span>
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>

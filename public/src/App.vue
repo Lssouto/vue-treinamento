@@ -5,7 +5,9 @@
       <div class="max">
         <c-header @changeNav="navbarStatus = !navbarStatus" />
         <transition name="fade">
-          <router-view />
+          <div class="container-view">
+            <router-view />
+          </div>
         </transition>
       </div>
     </div>

@@ -20,7 +20,7 @@ import Router from 'vue-router'
 
   //Individual components
   const Buttons = ()=> import('@/components/views/Buttons')
-  
+  const Forms = ()=> import('@/components/views/Forms/Index')
   //Error
   import c404 from '@/components/error/404'
 
@@ -88,6 +88,12 @@ export default new Router({
       name: 'Buttons',
       component: Buttons,
       meta: {title: 'Buttons Examples'}
+    },
+    {
+      path: '/forms',
+      name: 'Forms',
+      component: Forms,
+      meta: {title: 'Forms Examples'}
     },
     {
       path: "*",

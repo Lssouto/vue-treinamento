@@ -5,6 +5,8 @@ import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue);
 
+import VeeValidate from 'vee-validate'
+Vue.use(VeeValidate)
 import App from './App'
 import router from './router'
 import { sync } from 'vuex-router-sync'
